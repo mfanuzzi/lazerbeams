@@ -4,8 +4,9 @@
 $beamPrimary: #d21888;
 
 html, body {
+    box-sizing: content-box;
     font-family: 'Century Gothic', 'Adventor', sans-serif;
-    font-size: nthGolden(6)+vw;
+    font-size: nthGolden(8)+vw;
     margin: 0;
 }
 
@@ -13,14 +14,18 @@ h1 {
     font-size: nthGolden(5)+vw;
 }
 h2 {
-    font-size: nthGolden(5)+vw;
+    font-weight: normal;
+    font-size: nthGolden(6)+vw;
 }
 h3 {
     font-weight: normal;
-    font-size: nthGolden(6)+vw;
+    font-size: nthGolden(7)+vw;
     text-align: justify;
 }
 p {
+}
+h2 + p {
+    margin-top: nthGolden(7)+vw;
 }
 
 h1, h2, h3, h4, p {
@@ -29,15 +34,24 @@ h1, h2, h3, h4, p {
 }
 
 .page {
-    height: 100vh;
+    min-height: 100vh;
 
     > div {
+        padding: 0 nthGolden(5)+vw;
+    }
+
+    &#p2 > div {
+        padding: 0 nthGolden(6)+vw;
+    }
+
+
+    &#p1 > div {
         padding: 0 nthGolden(7)+vw;
     }
 }
 
 .lb {
-    margin-top: nthGolden(5)+vw;
+    padding-top: nthGolden(5)+vw;
 }
 
 #lb {
@@ -55,7 +69,7 @@ h1, h2, h3, h4, p {
         $beamPrimary 100%);
 }
 .beam-vert {
-    background: linear-gradient(to bottom, 
+    background: linear-gradient(to left, 
         $beamPrimary 0%,
         $beamPrimary nthGolden(5)*1%,
         #ffffff nthGolden(5)*1%,
@@ -64,10 +78,114 @@ h1, h2, h3, h4, p {
         $beamPrimary 100%);
 }
 
+/*.beam-vert {
+    background: linear-gradient(to left, 
+        $beamPrimary 0%,
+        $beamPrimary nthGolden(9)*1vw,
+        #ffffff nthGolden(9)*1vw,
+        #ffffff nthGolden(8)*1vw,
+        $beamPrimary nthGolden(8)*1vw,
+        $beamPrimary 100%);
+}
+    */
+// main
+#main {
+    @extend .beam-vert;
+    background-size: nthGolden(6)*1vw 100%;
+    background-repeat: no-repeat;
+    background-position: 0 nthGolden(2)+vw;
+}
+
 // page 1
 #p1 {
+    background: linear-gradient(to bottom, $beamPrimary 0%, $beamPrimary 100%);
+    background-size: 100% calc(100vh - #{nthGolden(2)*1vw});
+    background-repeat: no-repeat;
+    background-position: nthGolden(6)*1vw - .5vw bottom;
+
     .beam {
         height: nthGolden(2)+vw;
-        width: 100%;
+    }
+}
+
+#p2 {
+    h2, p {
+        width: nthGolden(2)+vw;
+    }
+}
+
+// catalogue
+#p3 {
+    h1 {
+        width: auto;
+        display: inline-block;
+    }
+}
+#catalog-sort {
+    float: right;
+    padding: 0;
+    transform: rotateZ(45deg);
+    line-height: 1;
+    margin-top: nthGolden(4) * 1vw;
+    margin-right: nthGolden(6) * -1vw;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: nthGolden(3)+vw;
+
+        li {
+            display: inline-block;
+            flex-grow: 1;
+        }
+
+        li.sel {
+            font-weight: bold;
+        }
+    }
+
+    #sort-medium {
+        > li {
+            width: 33%;
+        }
+    }
+
+    #sort-artist {
+        margin-left: nthGolden(3) * .66666666vw;
+
+        > li {
+            width: 100%;
+        }
+    }
+}
+
+#catalog-items {
+    > div {
+        display: inline-block;
+        text-align: right;
+        margin: 0 0 0 nthGolden(9)+vw;
+
+        .art {
+            width: nthGolden(3)+vw;
+            height: nthGolden(3)+vw;
+            background-color: red;
+            position: relative;
+
+            &:before {
+                display: block;
+                content: '';
+                width: nthGolden(3)+vw;
+                height: nthGolden(9)+vw;
+                background-color: black;
+                position: absolute;
+                z-index: -1;
+                transform: rotateZ(45deg);
+                top: 0;
+                left: -33.33333%;
+            }
+        }
     }
 }
