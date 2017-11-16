@@ -48,6 +48,7 @@ h1, h2, h3, h4, p {
   line-height: 1; }
 
 .page {
+  position: relative;
   min-height: 100vh; }
   .page > div {
     padding: 0 9.01699vw; }
@@ -82,18 +83,28 @@ h1, h2, h3, h4, p {
 #main {
   background-size: 5.57281vw 100%;
   background-repeat: no-repeat;
-  background-position: 0 38.1966vw; }
+  background-position: 0 200vh; }
 
 #p1 {
   background: linear-gradient(to bottom, #d21888 0%, #d21888 100%);
   background-size: 100% calc(100vh - 38.1966vw);
   background-repeat: no-repeat;
-  background-position: 5.07281vw bottom; }
+  background-position: left bottom; }
   #p1 .beam {
     height: 38.1966vw; }
 
+#p2 h1 {
+  margin-top: -2.12862vw; }
+
 #p2 h2, #p2 p {
   width: 38.1966vw; }
+
+#p2 .logo {
+  position: absolute;
+  bottom: 0;
+  right: 2.12862vw;
+  width: 61.8034vw;
+  height: auto; }
 
 #p3 h1 {
   width: auto;

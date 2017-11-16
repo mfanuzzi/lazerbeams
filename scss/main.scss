@@ -34,6 +34,7 @@ h1, h2, h3, h4, p {
 }
 
 .page {
+    position: relative;
     min-height: 100vh;
 
     > div {
@@ -93,7 +94,7 @@ h1, h2, h3, h4, p {
     @extend .beam-vert;
     background-size: nthGolden(6)*1vw 100%;
     background-repeat: no-repeat;
-    background-position: 0 nthGolden(2)+vw;
+    background-position: 0 200vh;
 }
 
 // page 1
@@ -101,7 +102,7 @@ h1, h2, h3, h4, p {
     background: linear-gradient(to bottom, $beamPrimary 0%, $beamPrimary 100%);
     background-size: 100% calc(100vh - #{nthGolden(2)*1vw});
     background-repeat: no-repeat;
-    background-position: nthGolden(6)*1vw - .5vw bottom;
+    background-position: left bottom;
 
     .beam {
         height: nthGolden(2)+vw;
@@ -109,8 +110,20 @@ h1, h2, h3, h4, p {
 }
 
 #p2 {
+    h1 {
+        margin-top: nthGolden(8)*-1vw;
+    }
+
     h2, p {
         width: nthGolden(2)+vw;
+    }
+
+    .logo {
+        position: absolute;
+        bottom: 0;
+        right: nthGolden(8)+vw;
+        width: nthGolden(1)+vw;
+        height: auto;
     }
 }
 
