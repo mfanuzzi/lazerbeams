@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Adventor';
+  src: url("/fonts/texgyreadventor-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Adventor';
+  src: url("/fonts/texgyreadventor-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Adventor';
+  src: url("/fonts/texgyreadventor-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Adventor';
+  src: url("/fonts/texgyreadventor-bolditalic-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
+html, body {
+  font-family: 'Century Gothic', 'Adventor', sans-serif;
+  font-size: 5.57281vw;
+  margin: 0; }
+
+h1 {
+  font-size: 9.01699vw; }
+
+h2 {
+  font-size: 9.01699vw; }
+
+h3 {
+  font-weight: normal;
+  font-size: 5.57281vw;
+  text-align: justify; }
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  line-height: 1; }
+
+.page {
+  height: 100vh; }
+  .page > div {
+    padding: 0 3.44419vw; }
+
+.lb {
+  margin-top: 9.01699vw; }
+
+#lb {
+  width: auto;
+  height: 9.01699vw; }
+
+.beam {
+  background: linear-gradient(to bottom, #d21888 0%, #d21888 9.01699%, #ffffff 9.01699%, #ffffff 14.5898%, #d21888 14.5898%, #d21888 100%); }
+
+.beam-vert {
+  background: linear-gradient(to bottom, #d21888 0%, #d21888 9.01699%, #ffffff 9.01699%, #ffffff 14.5898%, #d21888 14.5898%, #d21888 100%); }
+
+#p1 .beam {
+  height: 38.1966vw;
+  width: 100%; }

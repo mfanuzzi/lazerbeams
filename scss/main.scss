@@ -1,0 +1,73 @@
+﻿@import "golden";
+@import "fonts";
+
+$beamPrimary: #d21888;
+
+html, body {
+    font-family: 'Century Gothic', 'Adventor', sans-serif;
+    font-size: nthGolden(6)+vw;
+    margin: 0;
+}
+
+h1 {
+    font-size: nthGolden(5)+vw;
+}
+h2 {
+    font-size: nthGolden(5)+vw;
+}
+h3 {
+    font-weight: normal;
+    font-size: nthGolden(6)+vw;
+    text-align: justify;
+}
+p {
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    line-height: 1;
+}
+
+.page {
+    height: 100vh;
+
+    > div {
+        padding: 0 nthGolden(7)+vw;
+    }
+}
+
+.lb {
+    margin-top: nthGolden(5)+vw;
+}
+
+#lb {
+    width: auto;
+    height: nthGolden(5)*1vw;
+}
+
+.beam {
+    background: linear-gradient(to bottom, 
+        $beamPrimary 0%,
+        $beamPrimary nthGolden(5)*1%,
+        #ffffff nthGolden(5)*1%,
+        #ffffff nthGolden(4)*1%,
+        $beamPrimary nthGolden(4)*1%,
+        $beamPrimary 100%);
+}
+.beam-vert {
+    background: linear-gradient(to bottom, 
+        $beamPrimary 0%,
+        $beamPrimary nthGolden(5)*1%,
+        #ffffff nthGolden(5)*1%,
+        #ffffff nthGolden(4)*1%,
+        $beamPrimary nthGolden(4)*1%,
+        $beamPrimary 100%);
+}
+
+// page 1
+#p1 {
+    .beam {
+        height: nthGolden(2)+vw;
+        width: 100%;
+    }
+}
