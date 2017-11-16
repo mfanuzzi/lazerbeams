@@ -111,7 +111,8 @@ h1, h2, h3, h4, p {
 
 #p2 {
     h1 {
-        margin-top: nthGolden(8)*-1vw;
+        position: relative;
+        top: nthGolden(8)*-1vw;
     }
 
     h2, p {
@@ -134,6 +135,17 @@ h1, h2, h3, h4, p {
         display: inline-block;
     }
 }
+
+.page.last {
+    .logo {
+        position: absolute;
+        bottom: 0;
+        right: nthGolden(8)+vw;
+        width: nthGolden(3)+vw;
+        height: auto;
+    }
+}
+
 #catalog-sort {
     float: right;
     padding: 0;

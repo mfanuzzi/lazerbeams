@@ -94,7 +94,8 @@ h1, h2, h3, h4, p {
     height: 38.1966vw; }
 
 #p2 h1 {
-  margin-top: -2.12862vw; }
+  position: relative;
+  top: -2.12862vw; }
 
 #p2 h2, #p2 p {
   width: 38.1966vw; }
@@ -109,6 +110,13 @@ h1, h2, h3, h4, p {
 #p3 h1 {
   width: auto;
   display: inline-block; }
+
+.page.last .logo {
+  position: absolute;
+  bottom: 0;
+  right: 2.12862vw;
+  width: 23.6068vw;
+  height: auto; }
 
 #catalog-sort {
   float: right;
