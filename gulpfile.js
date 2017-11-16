@@ -6,7 +6,8 @@ var gulp = require("gulp"),
   concat = require("gulp-concat"),
   cssmin = require("gulp-cssmin"),
   uglify = require("gulp-uglify"),
-  sass = require("gulp-sass");
+  sass = require("gulp-sass"),
+  connect = require('gulp-connect');
 
 var paths = {
   webroot: "./"
@@ -31,7 +32,8 @@ gulp.task("clean:css", function (cb) {
 gulp.task('sass', function () {
     return gulp.src(paths.scss)
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest("./css"));
+        .pipe(gulp.dest("./css"))
+        .pipe(connect.reload());
 });
 
 gulp.task('watch', function () {
@@ -55,3 +57,13 @@ gulp.task("min:css", function () {
 });
 
 gulp.task("min", ["min:js", "min:css"]);
+
+
+gulp.task('connect', function() {
+  connect.server({
+    root: '.',
+    livereload: true
+  });
+});
+
+gulp.task('default', ['connect']);
