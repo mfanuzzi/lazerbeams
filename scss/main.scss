@@ -2,12 +2,23 @@
 @import "fonts";
 
 $beamPrimary: #d21888;
+$beamSecondary: #18d1bd;
 
 html, body {
     box-sizing: content-box;
     font-family: 'Century Gothic', 'Adventor', sans-serif;
-    font-size: nthGolden(8)+vw;
     margin: 0;
+    width: 100vw;
+
+    @media screen and (orientation: portrait) {
+        font-size: nthGolden(7)+vw;
+    }
+
+    font-size: nthGolden(8)+vw;
+}
+
+a:hover {
+    color: $beamSecondary;
 }
 
 h1 {
@@ -16,11 +27,16 @@ h1 {
 h2 {
     font-weight: normal;
     font-size: nthGolden(6)+vw;
+
 }
 h3 {
     font-weight: normal;
     font-size: nthGolden(7)+vw;
     text-align: justify;
+
+    @media screen and (orientation: portrait) {
+        font-size: nthGolden(6)+vw;
+    }
 }
 p {
 }
@@ -36,6 +52,8 @@ h1, h2, h3, h4, p {
 .page {
     position: relative;
     min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;   
 
     > div {
         padding: 0 nthGolden(5)+vw;
@@ -55,10 +73,12 @@ h1, h2, h3, h4, p {
     padding-top: nthGolden(5)+vw;
 }
 
-#lb {
+#lb, #statement, #catalogue {
     width: auto;
     height: nthGolden(5)*1vw;
 }
+
+
 
 .beam {
     background: linear-gradient(to bottom, 
@@ -110,6 +130,9 @@ h1, h2, h3, h4, p {
 }
 
 #p2 {
+    background: url('/img/lazerbeamsbeam.svg') no-repeat left bottom;
+    background-size: 72vw 47vw;
+
     h1 {
         position: relative;
         top: nthGolden(8)*-1vw;
@@ -131,28 +154,46 @@ h1, h2, h3, h4, p {
 // catalogue
 #p3 {
     h1 {
+        position: relative;
+        top: nthGolden(8)*1vw;
         width: auto;
         display: inline-block;
     }
 }
 
 .page.last {
+    background: url('/img/lazerbeamsbeam.svg') no-repeat 6vw bottom;
+    background-size: 72vw 25vw;
+
     .logo {
         position: absolute;
         bottom: 0;
         right: nthGolden(8)+vw;
-        width: nthGolden(3)+vw;
-        height: auto;
+        width: auto;
+        height: nthGolden(3)+vw;
     }
 }
 
-#catalog-sort {
+p.whoa {
+    letter-spacing: nthGolden(9)+vw;
+}
+
+#catalog-punch {
     float: right;
+    margin-top: 0;
+    margin-right: nthGolden(7) * 1vw;
+    width: nthGolden(4) * 1vw;
+    height: nthGolden(3) * 2vw;
+}
+
+#catalog-sort {
+    position: absolute;
+    right: -5vw;
+
+    top: nthGolden(3) - nthGolden(6) * 1vw;
     padding: 0;
     transform: rotateZ(45deg);
     line-height: 1;
-    margin-top: nthGolden(4) * 1vw;
-    margin-right: nthGolden(6) * -1vw;
 
     ul {
         list-style-type: none;
@@ -160,11 +201,16 @@ h1, h2, h3, h4, p {
         padding: 0;
         display: flex;
         flex-wrap: wrap;
-        width: nthGolden(3)+vw;
+        width: 27vw;
 
         li {
             display: inline-block;
             flex-grow: 1;
+        }
+
+        li:hover {
+            color: $beamSecondary;
+            cursor: pointer;
         }
 
         li.sel {
@@ -174,12 +220,11 @@ h1, h2, h3, h4, p {
 
     #sort-medium {
         > li {
-            width: 33%;
         }
     }
 
     #sort-artist {
-        margin-left: nthGolden(3) * .66666666vw;
+        margin-left: 16vw;
 
         > li {
             width: 100%;
@@ -191,26 +236,74 @@ h1, h2, h3, h4, p {
     > div {
         display: inline-block;
         text-align: right;
-        margin: 0 0 0 nthGolden(9)+vw;
+        margin: 0 0 nthGolden(8)*1vw nthGolden(8)*1vw;
+        line-height: 1;
+
+        &.on .art {
+            width: nthGolden(1)+vw;
+            height: nthGolden(1)+vw;
+
+            @media screen and (orientation: portrait) {
+                width: 100vw - nthGolden(5);
+                height: 100vw - nthGolden(5);
+                margin-left: nthGolden(6) * -1vw;
+            }
+        }
+
 
         .art {
             width: nthGolden(3)+vw;
             height: nthGolden(3)+vw;
             background-color: red;
             position: relative;
+            box-shadow: nthGolden(9)+vw nthGolden(9)+vw black;
+
+            @media screen and (min-width: 1240px) {
+                width: nthGolden(4)+vw;
+                height: nthGolden(4)+vw;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
 
             &:before {
                 display: block;
                 content: '';
-                width: nthGolden(3)+vw;
-                height: nthGolden(9)+vw;
+                width: nthGolden(4)+vw;
+                height: nthGolden(11)+vw;
                 background-color: black;
                 position: absolute;
                 z-index: -1;
                 transform: rotateZ(45deg);
                 top: 0;
-                left: -33.33333%;
+                left: -4.7vw;
             }
         }
     }
+}
+
+// album colors
+#lb001, #lb007 {
+    color: #208f6f;
+}
+#lb002, #lb008 {
+    color: #445659;
+}
+#lb003, #lb009 {
+    color: #d6d385;
+}
+#lb004, #lb010 {
+    color: #c37670;
+}
+#lb005 {
+    color: #c74b25;
+}
+#lb006 {
+    color: #557f91;
 }
