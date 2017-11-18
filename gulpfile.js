@@ -7,7 +7,8 @@ var gulp = require("gulp"),
   cssmin = require("gulp-cssmin"),
   uglify = require("gulp-uglify"),
   sass = require("gulp-sass"),
-  connect = require('gulp-connect');
+  connect = require('gulp-connect'),
+  sort = require('gulp-sort');
 
 var paths = {
   webroot: "./"
@@ -44,8 +45,9 @@ gulp.task("clean", ["clean:js", "clean:css"]);
 
 gulp.task("min:js", function () {
   return gulp.src([paths.js, "!" + paths.minJs], { base: "." })
+    .pipe(sort({asc: false}))
     .pipe(concat(paths.concatJsDest))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest("."));
 });
 

@@ -1,4 +1,4 @@
-﻿@import "golden";
+@import "golden";
 @import "fonts";
 
 $beamPrimary: #d21888;
@@ -17,6 +17,10 @@ html, body {
     font-size: nthGolden(8)+vw;
 }
 
+a {
+    color: #000;
+    
+}
 a:hover {
     color: $beamSecondary;
 }
@@ -38,6 +42,15 @@ h3 {
         font-size: nthGolden(6)+vw;
     }
 }
+h4 {
+    font-size: nthGolden(8)+vw;
+    text-align: justify;
+
+    @media screen and (orientation: portrait) {
+        font-size: nthGolden(7)+vw;
+    }
+}
+
 p {
 }
 h2 + p {
@@ -183,7 +196,7 @@ p.whoa {
     margin-top: 0;
     margin-right: nthGolden(7) * 1vw;
     width: nthGolden(4) * 1vw;
-    height: nthGolden(3) * 2vw;
+    height: nthGolden(1) * 1vw;
 }
 
 #catalog-sort {
@@ -233,20 +246,43 @@ p.whoa {
 }
 
 #catalog-items {
+    /*background-image: url(/img/catalogtile.svg);
+    background-repeat: repeat-y;
+    background-size: nthGolden(3) + nthGolden(8) +vw; */
+
     > div {
         display: inline-block;
         text-align: right;
         margin: 0 0 nthGolden(8)*1vw nthGolden(8)*1vw;
         line-height: 1;
 
+        .info {
+            display: none;
+            padding: nthGolden(8)*1vw;
+            background-color: #fff;
+            border-left-style: solid;
+            border-left-width: nthGolden(10)*1vw;
+            border-bottom: solid nthGolden(10)*1vw $beamPrimary;
+
+            .desc,
+            .desc + h4 {
+                margin-top: nthGolden(8)*1vw;
+            }
+        }
+
         &.on .art {
             width: nthGolden(1)+vw;
-            height: nthGolden(1)+vw;
+            min-height: nthGolden(1)+vw;
+            height: auto;
 
             @media screen and (orientation: portrait) {
                 width: 100vw - nthGolden(5);
-                height: 100vw - nthGolden(5);
+                min-height: 100vw - nthGolden(5);
                 margin-left: nthGolden(6) * -1vw;
+            }
+
+            .info {
+                display: block;
             }
         }
 
@@ -254,7 +290,6 @@ p.whoa {
         .art {
             width: nthGolden(3)+vw;
             height: nthGolden(3)+vw;
-            background-color: red;
             position: relative;
             box-shadow: nthGolden(9)+vw nthGolden(9)+vw black;
 
@@ -291,9 +326,21 @@ p.whoa {
 // album colors
 #lb001, #lb007 {
     color: #208f6f;
+    .art {
+        background-color: #208f6f;
+    }
+    .info {
+        border-left-color: #208f6f;
+    }
 }
 #lb002, #lb008 {
     color: #445659;
+    .art {
+        background-color: #445659;
+    }
+    .info {
+        border-left-color: #445659;
+    }
 }
 #lb003, #lb009 {
     color: #d6d385;
