@@ -1,6 +1,9 @@
 /// <binding BeforeBuild='clean' Clean='clean' ProjectOpened='watch, default' />
 "use strict";
 
+var catalogData = require("./catalog.json");
+//console.log(catalogData.catalog[0].desc);
+
 var gulp = require("gulp"),
   rimraf = require("rimraf"),
   concat = require("gulp-concat"),
@@ -8,12 +11,15 @@ var gulp = require("gulp"),
   uglify = require("gulp-uglify"),
   sass = require("gulp-sass"),
   connect = require('gulp-connect'),
-  sort = require('gulp-sort');
+  sort = require('gulp-sort'),
+  hb = require('gulp-hb'),
+  rename = require('gulp-rename');
 
 var paths = {
   webroot: "./"
 };
 
+paths.html = paths.webroot + "*.tpl.html";
 paths.js = paths.webroot + "js/**/*.js";
 paths.minJs = paths.webroot + "js/**/*.min.js";
 paths.css = paths.webroot + "css/*.css";
@@ -38,7 +44,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    return gulp.watch(paths.scss, ['sass']);
+    gulp.watch(paths.scss, ['sass']);
+    gulp.watch([paths.html, "./catalog.json"], ['hb', ]);
+    gulp.watch(paths.js, ['min:js']);
 });
 
 gulp.task("clean", ["clean:js", "clean:css"]);
@@ -60,6 +68,18 @@ gulp.task("min:css", function () {
 
 gulp.task("min", ["min:js", "min:css"]);
 
+gulp.task('hb', function () {
+    var hbStream = hb()
+      .data(catalogData);
+
+    return gulp
+        .src('./*.tpl.html')
+        .pipe(hbStream)
+        .pipe(rename(function (path) {
+          path.basename = path.basename.replace('.tpl', '');
+        }))
+        .pipe(gulp.dest('.'));
+});
 
 gulp.task('connect', function() {
   connect.server({

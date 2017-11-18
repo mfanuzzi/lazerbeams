@@ -1,0 +1,90 @@
+{
+    "media" : ["Audio", "Video", "Interactive", "Wearings", "Objects", "Words"],
+    "artists" : ["Bebop '79", "Evergreen", "Gatefolde", "Lazerbeams: Tonite<em>!</em>", "Marcello Marcello", "The Vireos"],
+    "catalog": [
+    {
+        "no" : "lb001",
+        "artist" : "Lazerbeams: Tonite!",
+        "title" : "S01E03: Raygun Gothic",
+        "color" : "208f6f",
+        "h3" : "Lap time is important.",
+        "desc" : "<em>Nachtblau</em>, the first album from the famed German producer Hans Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.",
+        "date" : "2017.11.11",
+        "avails" : [
+            {"name" : "Spotify", "href" : "#"},
+            {"name" : "Tidal", "href" : "#"},
+            {"name" : "Bandcamp", "href" : "#"}
+        ]
+    },
+    {
+        "no" : "lb002",
+        "artist" : "Lazerbeams: Tonite!",
+        "title" : "S01E03: Raygun Gothic",
+        "color" : "445659",
+        "h3" : "Lap time is important.",
+        "desc" : "“<em>Nachtblau</em>, the first album from the famed German producer Hans Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.”",
+        "date" : "2017.11.11",
+        "avails" : [
+            {"name" : "Spotify", "href" : "#"},
+            {"name" : "Tidal", "href" : "#"},
+            {"name" : "Bandcamp", "href" : "#"}
+        ]
+    },
+    {
+        "no" : "lb003",
+        "artist" : "Lazerbeams: Tonite!",
+        "title" : "S01E03: Raygun Gothic",
+        "color" : "d6d385",
+        "h3" : "Lap time is important.",
+        "desc" : "“<em>Nachtblau</em>, the first album from the famed German producer Hans Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.”",
+        "date" : "2017.11.11",
+        "avails" : [
+            {"name" : "Spotify", "href" : "#"},
+            {"name" : "Tidal", "href" : "#"},
+            {"name" : "Bandcamp", "href" : "#"}
+        ]
+    },
+    {
+        "no" : "lb004",
+        "artist" : "Lazerbeams: Tonite!",
+        "title" : "S01E03: Raygun Gothic",
+        "color" : "c37670",
+        "h3" : "Lap time is important.",
+        "desc" : "“<em>Nachtblau</em>, the first album from the famed German producer Hans Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.”",
+        "date" : "2017.11.11",
+        "avails" : [
+            {"name" : "Spotify", "href" : "#"},
+            {"name" : "Tidal", "href" : "#"},
+            {"name" : "Bandcamp", "href" : "#"}
+        ]
+    },
+    {
+        "no" : "lb005",
+        "artist" : "Lazerbeams: Tonite!",
+        "title" : "S01E03: Raygun Gothic",
+        "color" : "c74b25",
+        "h3" : "Lap time is important.",
+        "desc" : "“<em>Nachtblau</em>, the first album from the famed German producer Hans Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.”",
+        "date" : "2017.11.11",
+        "avails" : [
+            {"name" : "Spotify", "href" : "#"},
+            {"name" : "Tidal", "href" : "#"},
+            {"name" : "Bandcamp", "href" : "#"}
+        ]
+    },
+    {
+        "no" : "lb006",
+        "artist" : "Lazerbeams: Tonite!",
+        "title" : "S01E03: Raygun Gothic",
+        "color" : "557f91",
+        "h3" : "Lap time is important.",
+        "desc" : "“<em>Nachtblau</em>, the first album from the famed German producer Hans Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.”",
+        "date" : "2017.11.11",
+        "avails" : [
+            {"name" : "Spotify", "href" : "#"},
+            {"name" : "Tidal", "href" : "#"},
+            {"name" : "Bandcamp", "href" : "#"}
+        ]
+    }
+    ]
+}

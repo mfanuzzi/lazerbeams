@@ -187,6 +187,8 @@ p.whoa {
   /*background-image: url(/img/catalogtile.svg);
     background-repeat: repeat-y;
     background-size: nthGolden(3) + nthGolden(8) +vw; */ }
+  #catalog-items .cid {
+    text-transform: uppercase; }
   #catalog-items > div {
     display: inline-block;
     text-align: right;
@@ -238,29 +240,3 @@ p.whoa {
         transform: rotateZ(45deg);
         top: 0;
         left: -4.7vw; }
-
-#lb001, #lb007 {
-  color: #208f6f; }
-  #lb001 .art, #lb007 .art {
-    background-color: #208f6f; }
-  #lb001 .info, #lb007 .info {
-    border-left-color: #208f6f; }
-
-#lb002, #lb008 {
-  color: #445659; }
-  #lb002 .art, #lb008 .art {
-    background-color: #445659; }
-  #lb002 .info, #lb008 .info {
-    border-left-color: #445659; }
-
-#lb003, #lb009 {
-  color: #d6d385; }
-
-#lb004, #lb010 {
-  color: #c37670; }
-
-#lb005 {
-  color: #c74b25; }
-
-#lb006 {
-  color: #557f91; }

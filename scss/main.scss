@@ -249,6 +249,9 @@ p.whoa {
     /*background-image: url(/img/catalogtile.svg);
     background-repeat: repeat-y;
     background-size: nthGolden(3) + nthGolden(8) +vw; */
+    .cid {
+        text-transform: uppercase;
+    }
 
     > div {
         display: inline-block;
@@ -321,36 +324,4 @@ p.whoa {
             }
         }
     }
-}
-
-// album colors
-#lb001, #lb007 {
-    color: #208f6f;
-    .art {
-        background-color: #208f6f;
-    }
-    .info {
-        border-left-color: #208f6f;
-    }
-}
-#lb002, #lb008 {
-    color: #445659;
-    .art {
-        background-color: #445659;
-    }
-    .info {
-        border-left-color: #445659;
-    }
-}
-#lb003, #lb009 {
-    color: #d6d385;
-}
-#lb004, #lb010 {
-    color: #c37670;
-}
-#lb005 {
-    color: #c74b25;
-}
-#lb006 {
-    color: #557f91;
 }

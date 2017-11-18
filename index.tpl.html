@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>lazerbeams</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" type="image/png" href="/img/favicon128.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="description" content="">
+</head>
+<body>
+    <div id="main">
+        <div id="p1" class="page">
+            <div>
+                <h1 class="lb"><img id="lb" src="/img/lazerbeams.svg" alt="LAZERBEAMS" /></h1>
+                <h3>Emerald by day, <em>ruby by night.</em></h3>
+            </div>
+            <div class="beam"></div>
+        </div>
+        <div id="p2" class="page">
+            <div>
+                <h1><img id="statement" src="/img/statement.svg" alt="STATEMENT" /></h1>
+                <h2>Nothing has changed.<br />Everything is changed.<br />In your field.</h2>
+                <p>Now we must burn all that you are.</p>
+                <img class="logo" src="img/logo.svg" />
+            </div>
+        </div>
+        <div id="p3" class="page">
+            <div>
+                <h1><img id="catalogue" src="/img/catalogue.svg" alt="CATALOGUE" /></h1>
+                <div id="catalog-sort">
+                    <ul id="sort-medium">
+                        {{#each media}}
+                        <li>{{.}}</li>
+                        {{/each}}
+                    </ul><ul id="sort-artist">
+                        {{#each artists}}
+                        <li>{{{.}}}</li>
+                        {{/each}}
+                    </ul>                    
+                </div>
+                <div id="catalog-punch"></div>
+                <div id="catalog-items">
+                    {{#each catalog}}
+                    <div class="catalog-item" id="{{no}}" style="color:#{{color}}">
+                        <span class="cid">{{no}}</span>
+                        <div class="art" style="background-color:#{{color}}">
+                            <img src="/img/catalog/{{no}}.jpg" />
+                            <div class="info" style="border-left-color:#{{color}}">
+                                <h3>{{{h3}}}</h3>
+                                <p class="desc">{{{desc}}}</p>
+                                <h4>Release date</h4>
+                                <p>{{date}}</p>
+                                <h4>Availability</h4>
+                                <p>
+                                {{#each avails}}
+                                    <a href="{{href}}">{{name}}</a>{{#unless @last}}, {{/unless}}
+                                {{/each}}                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div id="p4" class="page last">
+            <div>
+                <p class="whoa">
+                    Marc welcomes the 44th President of the United States of America, Barack Obama, to the garage for conversation about college, fitting in, race relations, gun violence, changing the status quo, disappointing your fans, comedians, fatherhood and overcoming fear. And yes, this really happened. This episode is presented without commercial interruption courtesy of Squarespace. Go to MarcMeetsObama.com to see behind-the-scenes photos and captions.
+                </p>
+                <img class="logo" src="img/logo.svg" />
+            </div>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/site.min.js"></script>
+</body>
+</html>
