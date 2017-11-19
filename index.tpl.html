@@ -31,18 +31,18 @@
                 <div id="catalog-sort">
                     <ul id="sort-medium">
                         {{#each media}}
-                        <li>{{.}}</li>
+                        <li data-medium="{{.}}">{{.}}</li>
                         {{/each}}
                     </ul><ul id="sort-artist">
                         {{#each artists}}
-                        <li>{{{.}}}</li>
+                        <li data-artist="{{.}}">{{{.}}}</li>
                         {{/each}}
                     </ul>                    
                 </div>
                 <div id="catalog-punch"></div>
                 <div id="catalog-items">
                     {{#each catalog}}
-                    <div class="catalog-item" id="{{no}}" style="color:#{{color}}">
+                    <div class="catalog-item" id="{{no}}" style="color:#{{color}}" data-artist="{{artist}}" data-medium="{{medium}}">
                         <span class="cid">{{no}}</span>
                         <div class="art" style="background-color:#{{color}}">
                             <img src="/img/catalog/{{no}}.jpg" />

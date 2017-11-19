@@ -4,7 +4,8 @@
     "catalog": [
     {
         "no" : "lb001",
-        "artist" : "Lazerbeams: Tonite!",
+        "artist" : "Lazerbeams: Tonite<em>!</em>",
+        "medium" : "Audio",
         "title" : "S01E03: Raygun Gothic",
         "color" : "208f6f",
         "h3" : "Lap time is important.",
@@ -18,7 +19,8 @@
     },
     {
         "no" : "lb002",
-        "artist" : "Lazerbeams: Tonite!",
+        "artist" : "Gatefolde",
+        "medium" : "Audio",
         "title" : "S01E03: Raygun Gothic",
         "color" : "445659",
         "h3" : "Lap time is important.",
@@ -32,7 +34,8 @@
     },
     {
         "no" : "lb003",
-        "artist" : "Lazerbeams: Tonite!",
+        "artist" : "Marcello Marcello",
+        "medium" : "Audio",
         "title" : "S01E03: Raygun Gothic",
         "color" : "d6d385",
         "h3" : "Lap time is important.",
@@ -46,7 +49,8 @@
     },
     {
         "no" : "lb004",
-        "artist" : "Lazerbeams: Tonite!",
+        "artist" : "Evergreen",
+        "medium" : "Audio",
         "title" : "S01E03: Raygun Gothic",
         "color" : "c37670",
         "h3" : "Lap time is important.",
@@ -60,7 +64,8 @@
     },
     {
         "no" : "lb005",
-        "artist" : "Lazerbeams: Tonite!",
+        "artist" : "The Vireos",
+        "medium" : "Audio",
         "title" : "S01E03: Raygun Gothic",
         "color" : "c74b25",
         "h3" : "Lap time is important.",
@@ -74,7 +79,8 @@
     },
     {
         "no" : "lb006",
-        "artist" : "Lazerbeams: Tonite!",
+        "artist" : "Lazerbeams: Tonite<em>!</em>",
+        "medium" : "Audio",
         "title" : "S01E03: Raygun Gothic",
         "color" : "557f91",
         "h3" : "Lap time is important.",

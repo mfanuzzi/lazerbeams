@@ -176,7 +176,7 @@ p.whoa {
     #catalog-sort ul li:hover {
       color: #18d1bd;
       cursor: pointer; }
-    #catalog-sort ul li.sel {
+    #catalog-sort ul li.on {
       font-weight: bold; }
   #catalog-sort #sort-artist {
     margin-left: 16vw; }
@@ -204,6 +204,8 @@ p.whoa {
       #catalog-items > div .info .desc,
       #catalog-items > div .info .desc + h4 {
         margin-top: 2.12862vw; }
+    #catalog-items > div.hide {
+      display: none; }
     #catalog-items > div.on .art {
       width: 61.8034vw;
       min-height: 61.8034vw;

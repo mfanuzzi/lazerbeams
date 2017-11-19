@@ -70,6 +70,7 @@ gulp.task("min", ["min:js", "min:css"]);
 
 gulp.task('hb', function () {
     var hbStream = hb()
+      //.helpers(require('handlebars-helper-svg'))
       .data(catalogData);
 
     return gulp
