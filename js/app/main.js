@@ -27,6 +27,9 @@
 
 	//Bindings
     $('#sort-medium li').click(function() {
+    	if ($(this).hasClass('inactive'))
+    		return;
+
 		$(this).toggleClass('on');
 		if ($('#sort-medium li.on').length === $('#sort-medium li').length)
 			$('#sort-medium li.on').removeClass('on');
@@ -34,6 +37,9 @@
     });
 
     $('#sort-artist li').click(function() {
+    	if ($(this).hasClass('inactive'))
+    		return;
+
 		$(this).toggleClass('on');
 		if ($('#sort-artist li.on').length === $('#sort-artist li').length)
 			$('#sort-artist li.on').removeClass('on');

@@ -32,11 +32,28 @@ html, body {
     html, body {
       font-size: 3.44419vw; } }
 
+#catalog-sort li,
 a {
-  color: #000; }
-
-a:hover {
-  color: #18d1bd; }
+  color: #000;
+  text-decoration: none; }
+  #catalog-sort li:after,
+  a:after {
+    content: '';
+    border-top: solid 0.38192em #18d1bd;
+    position: absolute;
+    height: 0.381924em;
+    width: 1em;
+    position: absolute; }
+  #catalog-sort li:hover,
+  a:hover {
+    transition: border-top-color .3s;
+    color: #18d1bd; }
+    #catalog-sort li:hover:after,
+    a:hover:after {
+      border-top-color: #d21888; }
+  #catalog-sort li.inactive:after,
+  a.inactive:after {
+    border-top-color: #ddd; }
 
 h1 {
   font-size: 9.01699vw; }
@@ -119,7 +136,7 @@ h1, h2, h3, h4, p {
     height: 38.1966vw; }
 
 #p2 {
-  background: url("/img/lazerbeamsbeam2.svg") no-repeat left bottom;
+  background: #fff url("/img/lazerbeamsbeam2.svg") no-repeat left bottom;
   background-size: 66vw 47vw; }
   #p2 h1 {
     position: relative;
@@ -141,16 +158,24 @@ h1, h2, h3, h4, p {
 
 .page.last {
   background: url("/img/lazerbeamsbeam.svg") no-repeat left bottom;
-  background-size: 72vw 25vw; }
+  background-size: 72vw 25vw;
+  margin-top: 2.12862vw; }
   .page.last .logo {
     position: absolute;
     bottom: 0;
     right: 2.12862vw;
     width: auto;
     height: 23.6068vw; }
+  .page.last p {
+    display: inline-block;
+    width: 1em;
+    margin-right: 1em;
+    word-wrap: break-word;
+    text-align: right;
+    float: left; }
 
 p.whoa {
-  letter-spacing: 1.31556vw; }
+  letter-spacing: 0.5025vw; }
 
 #catalog-punch {
   float: right;
@@ -164,8 +189,11 @@ p.whoa {
   right: -5vw;
   top: 18.03399vw;
   padding: 0;
-  transform: rotateZ(45deg);
+  transform: rotateZ(40deg);
   line-height: 1; }
+  @media screen and (orientation: portrait) {
+    #catalog-sort {
+      right: -11vw; } }
   #catalog-sort ul {
     list-style-type: none;
     margin: 0;
@@ -173,6 +201,9 @@ p.whoa {
     display: flex;
     flex-wrap: wrap;
     width: 27vw; }
+    @media screen and (orientation: portrait) {
+      #catalog-sort ul {
+        width: 40vw; } }
     #catalog-sort ul li {
       display: inline-block;
       flex-grow: 1; }

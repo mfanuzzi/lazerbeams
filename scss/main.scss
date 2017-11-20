@@ -17,12 +17,32 @@ html, body {
     font-size: nthGolden(8)+vw;
 }
 
+#catalog-sort li,
 a {
     color: #000;
-    
-}
-a:hover {
-    color: $beamSecondary;
+    text-decoration: none;
+
+    &:after  {
+        content: '';
+        border-top: solid 0.381924em $beamSecondary;
+        position: absolute;
+        height: 0.381924em;
+        width: 1em;
+        position: absolute;
+    }
+    &:hover {
+        transition: border-top-color .3s;
+        color: $beamSecondary;
+        &:after  {
+            border-top-color: $beamPrimary;
+        }
+    }
+    &.inactive {
+        &:after  {
+            border-top-color: #ddd;
+        }        
+    }
+
 }
 
 h1 {
@@ -151,7 +171,7 @@ h1, h2, h3, h4, p {
 }
 
 #p2 {
-    background: url('/img/lazerbeamsbeam2.svg') no-repeat left bottom;
+    background: #fff url('/img/lazerbeamsbeam2.svg') no-repeat left bottom;
     background-size: 66vw 47vw;
 
     h1 {
@@ -185,6 +205,7 @@ h1, h2, h3, h4, p {
 .page.last {
     background: url('/img/lazerbeamsbeam.svg') no-repeat left bottom;
     background-size: 72vw 25vw;
+    margin-top: nthGolden(8)+vw;
 
     .logo {
         position: absolute;
@@ -193,10 +214,19 @@ h1, h2, h3, h4, p {
         width: auto;
         height: nthGolden(3)+vw;
     }
+
+    p {
+        display: inline-block;
+        width: 1em;
+        margin-right: 1em;
+        word-wrap: break-word;
+        text-align: right;
+        float: left;
+    }
 }
 
 p.whoa {
-    letter-spacing: nthGolden(9)+vw;
+    letter-spacing: nthGolden(11)+vw;
 }
 
 #catalog-punch {
@@ -210,10 +240,13 @@ p.whoa {
 #catalog-sort {
     position: absolute;
     right: -5vw;
+    @media screen and (orientation: portrait) {
+    right: -11vw;
+    }
 
     top: nthGolden(3) - nthGolden(6) * 1vw;
     padding: 0;
-    transform: rotateZ(45deg);
+    transform: rotateZ(40deg);
     line-height: 1;
 
     ul {
@@ -223,6 +256,9 @@ p.whoa {
         display: flex;
         flex-wrap: wrap;
         width: 27vw;
+        @media screen and (orientation: portrait) {
+        width: 40vw;
+        }
 
         li {
             display: inline-block;
