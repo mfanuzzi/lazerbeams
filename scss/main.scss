@@ -131,7 +131,11 @@ h1, h2, h3, h4, p {
     // logo natural height (by multiplying AR of 454/628 = 0.7229299363) = 44.679528025vw;
     // the portion of that which is the beams = ~65px
 
-    background-position: 0 calc(200vh - (44.679528025vw * (65/454)));
+
+    @media screen and (orientation: portrait) {
+        background-position: 0 calc(200vh - (44.679528025vw * (65/454)));
+    }
+    background-position: 0 200vh;
 }
 
 // page 1
@@ -179,7 +183,7 @@ h1, h2, h3, h4, p {
 }
 
 .page.last {
-    background: url('/img/lazerbeamsbeam.svg') no-repeat nthGolden(6) - nthGolden(11) + vw bottom;
+    background: url('/img/lazerbeamsbeam.svg') no-repeat left bottom;
     background-size: 72vw 25vw;
 
     .logo {

@@ -105,7 +105,10 @@ h1, h2, h3, h4, p {
 #main {
   background-size: 5.57281vw 100%;
   background-repeat: no-repeat;
-  background-position: 0 calc(200vh - (44.679528025vw * (65/454))); }
+  background-position: 0 200vh; }
+  @media screen and (orientation: portrait) {
+    #main {
+      background-position: 0 calc(200vh - (44.679528025vw * (65/454))); } }
 
 #p1 {
   background: linear-gradient(to bottom, #d21888 0%, #d21888 100%);
@@ -137,7 +140,7 @@ h1, h2, h3, h4, p {
   display: inline-block; }
 
 .page.last {
-  background: url("/img/lazerbeamsbeam.svg") no-repeat 5.07031vw bottom;
+  background: url("/img/lazerbeamsbeam.svg") no-repeat left bottom;
   background-size: 72vw 25vw; }
   .page.last .logo {
     position: absolute;
