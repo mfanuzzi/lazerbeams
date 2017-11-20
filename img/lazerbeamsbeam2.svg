@@ -11,8 +11,8 @@
 	<g>
 		<rect x="0" y="389.496" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="100%" height="3.277"/>
 		<rect x="0" y="380.691" fill-rule="evenodd" clip-rule="evenodd" fill="#D11888" width="100%" height="8.805"/>
-		<rect x="0" y="392.773" fill-rule="evenodd" clip-rule="evenodd" fill="#D11888" width="100%" height="24.788"/>
-		<rect x="0" y="417.354" fill-rule="evenodd" clip-rule="evenodd" fill="#D11888" width="100%" height="39.966"/>
+		<rect x="8%" y="392.773" fill-rule="evenodd" clip-rule="evenodd" fill="#D11888" width="100%" height="24.788"/>
+		<rect x="8%" y="417.354" fill-rule="evenodd" clip-rule="evenodd" fill="#D11888" width="100%" height="39.966"/>
 	</g>
 </g>
 </svg>

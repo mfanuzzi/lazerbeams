@@ -127,7 +127,11 @@ h1, h2, h3, h4, p {
     @extend .beam-vert;
     background-size: nthGolden(6)*1vw 100%;
     background-repeat: no-repeat;
-    background-position: 0 200vh;
+    // logo natural width = 61.8034vw
+    // logo natural height (by multiplying AR of 454/628 = 0.7229299363) = 44.679528025vw;
+    // the portion of that which is the beams = ~65px
+
+    background-position: 0 calc(200vh - (44.679528025vw * (65/454)));
 }
 
 // page 1
@@ -143,8 +147,8 @@ h1, h2, h3, h4, p {
 }
 
 #p2 {
-    background: url('/img/lazerbeamsbeam.svg') no-repeat left bottom;
-    background-size: 72vw 47vw;
+    background: url('/img/lazerbeamsbeam2.svg') no-repeat left bottom;
+    background-size: 66vw 47vw;
 
     h1 {
         position: relative;
@@ -175,7 +179,7 @@ h1, h2, h3, h4, p {
 }
 
 .page.last {
-    background: url('/img/lazerbeamsbeam.svg') no-repeat 6vw bottom;
+    background: url('/img/lazerbeamsbeam.svg') no-repeat nthGolden(6) - nthGolden(11) + vw bottom;
     background-size: 72vw 25vw;
 
     .logo {
@@ -228,6 +232,11 @@ p.whoa {
 
         li.on {
             font-weight: bold;
+        }
+
+        li.inactive {
+            color: #fff;
+            text-shadow: #aaa -0.1em 0.1em;
         }
     }
 

@@ -8,6 +8,24 @@
         }
     });
 
+
+    //Sorting and filtering
+	var allMedia = $('.catalog-item').map(function(){ return $(this).attr('data-medium'); }).get();
+	var allArtists = $('.catalog-item').map(function(){ return $(this).attr('data-artist'); }).get();
+
+	//First, remove options that don't have any items assosciated w/them
+	$('#sort-medium li').each(function(i) {
+		if ($.inArray($(this).attr('data-medium'), allMedia) === -1) {
+			$(this).addClass('inactive');
+		}
+	});
+	$('#sort-artist li').each(function(i) {
+		if ($.inArray($(this).attr('data-artist'), allArtists) === -1) {
+			$(this).addClass('inactive');
+		}
+	});
+
+	//Bindings
     $('#sort-medium li').click(function() {
 		$(this).toggleClass('on');
 		if ($('#sort-medium li.on').length === $('#sort-medium li').length)
@@ -24,15 +42,11 @@
 
     function UpdateSort() {
     	var activeMedia = $('#sort-medium li.on').map(function(){ return $(this).attr('data-medium'); }).get();
-    	if (activeMedia.length == 0)
-    		activeMedia = $('#sort-medium li').map(function(){ return $(this).attr('data-medium'); }).get();
+    	var anyMedia = activeMedia.length === 0;
 
     	var activeArtists = $('#sort-artist li.on').map(function(){ return $(this).attr('data-artist'); }).get();
-    	if (activeArtists.length == 0)
-    		activeArtists = $('#sort-artist li').map(function(){ return $(this).attr('data-artist'); }).get();
+    	var anyArtist = activeArtists.length === 0;
 
-    	console.log(activeArtists);
-    	console.log(activeMedia);
 
     	$('.catalog-item').each(function(i) {
     		console.log($(this).attr('data-medium'));
@@ -40,10 +54,10 @@
     		console.log($(this).attr('data-artist'));
     		console.log($.inArray($(this).attr('data-artist'), activeArtists));
 
-    		if (($.inArray(
+    		if ((anyMedia || $.inArray(
     				$(this).attr('data-medium'),
     				activeMedia) > -1) && 
-    			($.inArray(
+    			(anyArtist || $.inArray(
 	    			$(this).attr('data-artist'),
 	    			activeArtists) > -1))
     			{
