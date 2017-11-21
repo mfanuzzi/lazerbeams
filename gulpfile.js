@@ -15,16 +15,18 @@ var gulp = require("gulp"),
   hb = require('gulp-hb'),
   rename = require('gulp-rename'),
   yaml = require('js-yaml'),
-  fs   = require('fs');
+  fs   = require('fs'),
+  imageResize = require('gulp-image-resize'),
+  imagemin = require('gulp-imagemin');
 
 var catalogData = yaml.safeLoad(fs.readFileSync('./catalog.yaml', 'utf8'));
-//console.log(catalogData.catalog[0].desc);
 
 var paths = {
   webroot: "./"
 };
 
 paths.html = paths.webroot + "*.tpl.html";
+paths.catalog = paths.webroot + "img/catalog/*.jpg";
 paths.js = paths.webroot + "js/**/*.js";
 paths.minJs = paths.webroot + "js/**/*.min.js";
 paths.css = paths.webroot + "css/*.css";
@@ -70,6 +72,20 @@ gulp.task("min:css", function () {
     .pipe(cssmin())
     .pipe(gulp.dest("."));
 });
+
+gulp.task("min:img", function() {
+  return gulp.src([paths.catalog])
+    .pipe(imageResize({ width: 600 }))
+    // .pipe(imagemin({
+    //   progressive: true
+    // }))
+    .pipe(rename(function (path) {
+      console.log(path.dirname);
+      path.dirname += "/sm";
+    }))
+    .pipe(gulp.dest("./img/catalog"));
+});
+
 
 gulp.task("min", ["min:js", "min:css"]);
 

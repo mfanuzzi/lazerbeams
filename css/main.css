@@ -136,8 +136,7 @@ h1, h2, h3, h4, p {
     height: 38.1966vw; }
 
 #p2 {
-  background: #fff url("/img/lazerbeamsbeam2.svg") no-repeat left bottom;
-  background-size: 66vw 47vw; }
+  background-color: #fff; }
   #p2 h1 {
     position: relative;
     top: -2.12862vw; }
@@ -147,8 +146,8 @@ h1, h2, h3, h4, p {
     position: absolute;
     bottom: 0;
     right: 2.12862vw;
-    width: 61.8034vw;
-    height: auto; }
+    height: 44.67953vw;
+    width: auto; }
 
 #p3 h1 {
   position: relative;
@@ -157,8 +156,6 @@ h1, h2, h3, h4, p {
   display: inline-block; }
 
 .page.last {
-  background: url("/img/lazerbeamsbeam.svg") no-repeat left bottom;
-  background-size: 72vw 25vw;
   margin-top: 2.12862vw; }
   .page.last .logo {
     position: absolute;

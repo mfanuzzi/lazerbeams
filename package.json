@@ -5,11 +5,12 @@
         "gulp-connect": "^5.0.0",
         "gulp-cssmin": "0.1.7",
         "gulp-hb": "^6.0.2",
+        "gulp-image-resize": "^0.13.0",
+        "gulp-imagemin": "^4.0.0",
         "gulp-rename": "^1.2.2",
         "gulp-sass": "3.1.0",
         "gulp-sort": "^2.0.0",
         "gulp-uglify": "2.0.1",
-        "handlebars-helper-svg": "^2.0.1",
         "js-yaml": "^3.10.0",
         "rimraf": "2.6.1"
     }

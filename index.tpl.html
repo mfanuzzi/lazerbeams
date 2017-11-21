@@ -45,7 +45,11 @@
                     <div class="catalog-item" id="{{no}}" style="color:#{{color}}" data-artist="{{artist}}" data-medium="{{medium}}">
                         <span class="cid">{{no}}</span>
                         <div class="art" style="background-color:#{{color}}">
-                            <img src="/img/catalog/{{no}}.jpg" />
+                            <img 
+                                src="/img/catalog/{{no}}.jpg" alt="{{title}}"
+                                srcset=" /img/catalog/sm/{{no}}.jpg 600w,
+                                         /img/catalog/{{no}}.jpg 1857w"
+                            />
                             <div class="info" style="border-left-color:#{{color}}">
                                 <h3>{{{h3}}}</h3>
                                 <div class="desc">{{{desc}}}</div>
