@@ -1,7 +1,7 @@
 /// <binding BeforeBuild='clean' Clean='clean' ProjectOpened='watch, default' />
 "use strict";
 
-var catalogData = require("./catalog.json");
+//var catalogData = require("./catalog.json");
 //console.log(catalogData.catalog[0].desc);
 
 var gulp = require("gulp"),
@@ -13,7 +13,12 @@ var gulp = require("gulp"),
   connect = require('gulp-connect'),
   sort = require('gulp-sort'),
   hb = require('gulp-hb'),
-  rename = require('gulp-rename');
+  rename = require('gulp-rename'),
+  yaml = require('js-yaml'),
+  fs   = require('fs');
+
+var catalogData = yaml.safeLoad(fs.readFileSync('./catalog.yaml', 'utf8'));
+//console.log(catalogData.catalog[0].desc);
 
 var paths = {
   webroot: "./"
@@ -45,7 +50,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function () {
     gulp.watch(paths.scss, ['sass']);
-    gulp.watch([paths.html, "./catalog.json"], ['hb', ]);
+    gulp.watch([paths.html, "./catalog.yaml"], ['hb', ]);
     gulp.watch(paths.js, ['min:js']);
 });
 

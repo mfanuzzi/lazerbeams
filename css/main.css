@@ -239,8 +239,11 @@ p.whoa {
       border-left-width: 0.81306vw;
       border-bottom: solid 0.81306vw #d21888; }
       #catalog-items > div .info .desc,
+      #catalog-items > div .info .desc p,
       #catalog-items > div .info .desc + h4 {
         margin-top: 2.12862vw; }
+      #catalog-items > div .info .desc p {
+        text-align: center; }
     #catalog-items > div.hide {
       display: none; }
     #catalog-items > div.on .art {

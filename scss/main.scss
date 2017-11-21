@@ -317,8 +317,13 @@ p.whoa {
             border-bottom: solid nthGolden(10)*1vw $beamPrimary;
 
             .desc,
+            .desc p,
             .desc + h4 {
                 margin-top: nthGolden(8)*1vw;
+            }
+
+            .desc p{
+                text-align: center;
             }
         }
 
