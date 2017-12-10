@@ -71,8 +71,6 @@ h4 {
     }
 }
 
-p {
-}
 h2 + p {
     margin-top: nthGolden(7)+vw;
 }
@@ -80,6 +78,8 @@ h2 + p {
 h1, h2, h3, h4, p {
     margin: 0;
     line-height: 1;
+}
+p {
 }
 
 .page {
