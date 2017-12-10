@@ -63,7 +63,6 @@ h2 {
 h3 {
     font-weight: normal;
     font-size: nthGolden(7)+vw;
-    text-align: center;
 
     @media screen and (orientation: portrait) {
         font-size: nthGolden(6)+vw;
@@ -334,6 +333,7 @@ p.whoa {
             h3{
                 border-bottom: solid;
                 border-right: solid;
+                text-align: center;
             }
 
             .desc p{

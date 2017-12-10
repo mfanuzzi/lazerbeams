@@ -73,8 +73,7 @@ h2 {
 
 h3 {
   font-weight: normal;
-  font-size: 3.44419vw;
-  text-align: center; }
+  font-size: 3.44419vw; }
   @media screen and (orientation: portrait) {
     h3 {
       font-size: 5.57281vw; } }
@@ -253,7 +252,8 @@ p.whoa {
         margin-top: 2.12862vw; }
       #catalog-items > div .info h3 {
         border-bottom: solid;
-        border-right: solid; }
+        border-right: solid;
+        text-align: center; }
       #catalog-items > div .info .desc p {
         text-align: justify; }
     #catalog-items > div.hide {
