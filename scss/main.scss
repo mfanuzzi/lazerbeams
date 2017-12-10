@@ -330,10 +330,15 @@ p.whoa {
                 margin-top: nthGolden(8)*1vw;
             }
 
-            h3{
+            h3 {
                 border-bottom: solid;
                 border-right: solid;
-                text-align: center;
+                text-align: right;
+                padding-right: .618vw;
+                font-size: nthGolden(8)+vw;
+                @media screen and (orientation: portrait) {
+                    font-size: nthGolden(7)+vw;
+                }
             }
 
             .desc p{
