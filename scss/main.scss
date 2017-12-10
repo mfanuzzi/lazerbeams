@@ -17,6 +17,13 @@ html, body {
     font-size: nthGolden(8)+vw;
 }
 
+// These rules assume that our "default" is landscape
+.pt { display: none; }
+@media screen and (orientation: portrait) {
+    .ls { display: none; }
+    .pt { display: block; }
+}
+
 #catalog-sort li,
 a {
     color: #000;
@@ -56,7 +63,7 @@ h2 {
 h3 {
     font-weight: normal;
     font-size: nthGolden(7)+vw;
-    text-align: justify;
+    text-align: center;
 
     @media screen and (orientation: portrait) {
         font-size: nthGolden(6)+vw;
@@ -199,6 +206,11 @@ p {
         width: auto;
         display: inline-block;
     }
+
+
+    h3, p {
+        line-height: 1.618;
+    }
 }
 
 .page.last {
@@ -236,7 +248,7 @@ p.whoa {
 
 #catalog-sort {
     position: absolute;
-    right: -5vw;
+    right: -6vw;
     @media screen and (orientation: portrait) {
     right: -11vw;
     }
@@ -319,8 +331,13 @@ p.whoa {
                 margin-top: nthGolden(8)*1vw;
             }
 
+            h3{
+                border-bottom: solid;
+                border-right: solid;
+            }
+
             .desc p{
-                text-align: center;
+                text-align: justify;
             }
         }
 

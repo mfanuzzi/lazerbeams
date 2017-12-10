@@ -75,7 +75,7 @@ gulp.task("min:css", function () {
 
 gulp.task("min:img", function() {
   return gulp.src([paths.catalog])
-    .pipe(imageResize({ width: 600 }))
+    .pipe(imageResize({ width: 800 }))
     // .pipe(imagemin({
     //   progressive: true
     // }))
