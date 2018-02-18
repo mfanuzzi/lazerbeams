@@ -1,4 +1,5 @@
 ﻿$(function () {
+    // Expanding/closing descriptions
     $('.catalog-item .art img').click(function () {
     	if ($('.catalog-item.on .art img').is(this)) {
     		$(this).parent().parent().toggleClass('on');
@@ -6,8 +7,13 @@
 	        $('.catalog-item.on').removeClass('on');
         	$(this).parent().parent().addClass('on');
         }
-    });
 
+        //setTimeout(function() {
+            if ($('.catalog-item.on').length > 0) {
+                focusItem($('.catalog-item.on'));
+            }
+        //}, 1);
+    });
 
     //Sorting and filtering
 	var allMedia = $('.catalog-item').map(function(){ return $(this).attr('data-medium'); }).get();
@@ -73,4 +79,23 @@
     				$(this).addClass('hide');
     		});
     	}
+
+    // Handle the hashtag on load
+    if (window.location.hash) {
+        var requestedItem = $(window.location.hash);
+        if (requestedItem.length > 0) {
+            requestedItem.find('.art img').click();
+        }
+        window.location.hash = '';
+    }
+
+    function focusItem(catalogItem) {
+        var vw = $(window).width()/100;
+        var portrait = $(window).width() < $(window).height();
+        var offset = catalogItem.offset();
+        
+        $('body, html').delay(10).animate({
+          scrollTop: offset.top - ((portrait ? .5 : 9)*vw)
+        }, 1600);    
+    }
 });

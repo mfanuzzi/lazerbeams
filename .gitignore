@@ -3,4 +3,5 @@ node_modules
 package-lock.json
 index.html
 css/main.css
+js/site.min.js
 lb*/
