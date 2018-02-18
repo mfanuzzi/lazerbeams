@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{title}} by {{artist}}</title>
+    <link rel="shortcut icon" type="image/png" href="/img/favicon128.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="description" content="{{h3}}">
+    <meta name="theme-color" content="#d21888">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="canonical" href="http://lazerbea.ms/{{no}}">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{title}} by {{artist}} at lazerbea.ms" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://lazerbea.ms/" />
+    <meta property="og:image" content="http://lazerbea.ms/img/catalog/{{no}}.jpg" />
+    <meta property="og:description" content="{{h3}}" />
+
+</head>
+<body>
+    <div id="main">
+        {{desc}}
+    </div>
+    <script>
+        window.location.replace('/#{{no}}');
+    </script>
+</body>
+</html>

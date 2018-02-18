@@ -4,7 +4,7 @@
 //var catalogData = require("./catalog.json");
 //console.log(catalogData.catalog[0].desc);
 
-var gulp = require("gulp"),
+const gulp = require("gulp"),
   rimraf = require("rimraf"),
   concat = require("gulp-concat"),
   cssmin = require("gulp-cssmin"),
@@ -17,7 +17,8 @@ var gulp = require("gulp"),
   yaml = require('js-yaml'),
   fs   = require('fs'),
   imageResize = require('gulp-image-resize'),
-  imagemin = require('gulp-imagemin');
+  imagemin = require('gulp-imagemin'),
+  path = require('path');
 
 var catalogData = yaml.safeLoad(fs.readFileSync('./catalog.yaml', 'utf8'));
 
@@ -95,7 +96,7 @@ gulp.task('hb', function () {
       .data(catalogData);
 
     return gulp
-        .src('./*.tpl.html')
+        .src('./index.tpl.html')
         .pipe(hbStream)
         .pipe(rename(function (path) {
           path.basename = path.basename.replace('.tpl', '');
@@ -103,7 +104,42 @@ gulp.task('hb', function () {
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('connect', function() {
+gulp.task('shares', function () {
+  // For each catalog item, create a share page for each available href
+  catalogData.catalog.forEach(function(i){
+    i.avails.forEach(function (a) {
+
+      Object.assign(a, i);
+      a.artist = a.artist.replace(/(<([^>]+)>)/ig,"");
+
+      var hbStream = hb()
+        //.helpers(require('handlebars-helper-svg'))
+        .data(a);
+
+      gulp
+          .src('./share.tpl.html')
+          .pipe(hbStream)
+          .pipe(rename(function (path) {
+            path.basename = 'index'
+          }))
+          .pipe(gulp.dest(path.join(i.no, a.name.toLowerCase())));
+    }); 
+
+    var hbStream = hb()
+      //.helpers(require('handlebars-helper-svg'))
+      .data(i);
+
+    gulp
+        .src('./item.tpl.html')
+        .pipe(hbStream)
+        .pipe(rename(function (path) {
+          path.basename = 'index'
+        }))
+        .pipe(gulp.dest(i.no));
+  }); 
+});
+
+gulp.task('connect', function () {
   connect.server({
     root: '.',
     livereload: true
