@@ -73,10 +73,10 @@ catalog:
   avails:
   - name: Bandcamp
     href: "https://lazerbeams.bandcamp.com/album/excitable-andr-finds-love-in-sunrise-still"
-#  - name: Spotify
-#    href: "https://open.spotify.com/album/6mbFrYNWOnpRzpiRgGj0uM"
-#  - name: iTunes
-#    href: "https://itunes.apple.com/us/album/heaventree-of-stars/1335382027?uo=4&app=itunes"
+  - name: Spotify
+    href: "https://open.spotify.com/album/2J3ilAWQachOZ1cqXwdP4U"
+  - name: iTunes
+    href: "https://itunes.apple.com/us/album/excitable-andr%C3%A9-finds-love-in-sunrise-still/1350093042?uo=4&app=itunes"
 
 # - 'no': lb002
 #   artist: Gatefolde
