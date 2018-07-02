@@ -149,5 +149,23 @@ catalog:
     href: "https://open.spotify.com/album/14WIaEVH6qYAcqcwMhD0Pr"
   - name: iTunes
     href: "https://itunes.apple.com/us/album/the-response/1375109737?uo=4&app=itunes"
+- 'no': lb006
+  artist: 'Lazerbeams: Tonite<em>!</em>'
+  medium: Audio
+  title: 'S01E04: Jazz'
+  color: fcde62
+  h3: 𝘫𝘢𝘻𝘻 =ＪΛＺＺ J₳ⱫⱫ 𝖏𝖆𝖟𝖟 j̴a̴z̴z̴ ᒍᗩᘔᘔ ⓙⓐⓩⓩ 
+  desc: |
+    <p>What is a jazz today? What is the reality of anything we experience in this moment of absolute relative existence? Here, we warble and shake through the synthetic body waves lapping at our minds' doors. Stepping beyond into a handdrum and guitar, master musicians here? Yes. Sailing Upon The Wind softly sweetly. Yet we later retrieve moments from late Coltrane breathing through a digital age, and close with the most personal and intense moment of drumming lazerbeams has yet captured. What's this thing called jazz? That's <em>this</em> thing.</p>
+
+    <p>Improvised, captured and created at The Caged Unicorn in Portland, OR. Imagery directly generated from musical performance. #lb2n</p>"
+  date: 2018.06.28
+  avails:
+  - name: Bandcamp
+    href: "https://lazerbeams.bandcamp.com/album/s01e04-jazz"
+  - name: Spotify
+    href: "https://open.spotify.com/album/1Gy5s5gzKzEQcg91gwQVIO"
+  - name: iTunes
+    href: "https://itunes.apple.com/us/album/jazz/1405386693?uo=4&app=itunes&at=1001lry3&ct=dashboard"
 
 
