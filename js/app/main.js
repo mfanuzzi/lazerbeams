@@ -1,4 +1,6 @@
 ﻿$(function () {
+    var hashed = false;
+
     // Expanding/closing descriptions
     $('.catalog-item .art img').click(function () {
     	if ($('.catalog-item.on .art img').is(this)) {
@@ -85,6 +87,7 @@
         var requestedItem = $(window.location.hash);
         if (requestedItem.length > 0) {
             requestedItem.find('.art img').click();
+            hashed = true;
         }
         window.location.hash = '';
     }
@@ -96,6 +99,8 @@
         
         $('body, html').delay(10).animate({
           scrollTop: offset.top - ((portrait ? .5 : 9)*vw)
-        }, 1600);    
+        }, (hashed?1000:300));
+
+        hashed = false;
     }
 });

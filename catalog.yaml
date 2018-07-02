@@ -62,6 +62,21 @@ catalog:
     href: "https://open.spotify.com/album/6mbFrYNWOnpRzpiRgGj0uM"
   - name: iTunes
     href: "https://itunes.apple.com/us/album/heaventree-of-stars/1335382027?uo=4&app=itunes"
+- 'no': lb002.1
+  artist: 'Lazerbeams: Tonite<em>!</em>'
+  medium: Video
+  color: 198774
+  h3: Rare Birds
+  desc: |
+    <p><em>"To me, this album is a swirling universe of interstellar bodies, warm and full of liquid evolution." -MF</em></p> 
+
+    <p>A swirling evolution, lazerbea.ms is proud to present the first video generated using LAZERFOCUS 2.0 technology. This is the very same technology that we use to create the cover art for LB:2N<em>!</em> episodes. Now with greater (e)motion.</p>
+
+    <p>Life is multimodal, and so are we. With this video we present not simply an abstraction or simple accompaniment, but rather a story. A moment for you, dear viewer, to find your own meanings within this strange little universe. Find a place to land.</p>
+  date: 2018.04.05
+  avails:
+  - name: Vimeo
+    href: "https://vimeo.com/263402294"
 - 'no': lb003
   artist: 'Evergreen'
   medium: Audio
@@ -77,94 +92,62 @@ catalog:
     href: "https://open.spotify.com/album/2J3ilAWQachOZ1cqXwdP4U"
   - name: iTunes
     href: "https://itunes.apple.com/us/album/excitable-andr%C3%A9-finds-love-in-sunrise-still/1350093042?uo=4&app=itunes"
+- 'no': lb004
+  artist: "Bebop '79"
+  medium: Audio
+  title: "what is bebop '79? where is?"
+  color: 305186
+  h3: What is bebop?
+  desc: |
+    <p><em>"it sounds like you got possessed by an 8-bit Ghost Pepper, and then you left your body to possess a neon jazz orchestra conducted by your physical body, possessed by said pepper" -Axton Frick</em></p>
 
-# - 'no': lb002
-#   artist: Gatefolde
-#   medium: Audio
-#   title: 'S01E03: Raygun Gothic'
-#   color: '445659'
-#   h3: Orgy porgy bumblepuppy.
-#   desc: "“<em>Nachtblau</em>, the first album from the famed German producer Hans
-#     Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic
-#     [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo
-#     beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.”"
-#   date: 2017.11.11
-#   avails:
-#   - name: Spotify
-#     href: "#"
-#   - name: Tidal
-#     href: "#"
-#   - name: Bandcamp
-#     href: "#"
-# - 'no': lb003
-#   artist: Marcello Marcello
-#   medium: Audio
-#   title: 'S01E03: Raygun Gothic'
-#   color: d6d385
-#   h3: Orgy porgy bumblepuppy.
-#   desc: "“<em>Nachtblau</em>, the first album from the famed German producer Hans
-#     Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic
-#     [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo
-#     beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.”"
-#   date: 2017.11.11
-#   avails:
-#   - name: Spotify
-#     href: "#"
-#   - name: Tidal
-#     href: "#"
-#   - name: Bandcamp
-#     href: "#"
-# - 'no': lb004
-#   artist: Evergreen
-#   medium: Audio
-#   title: 'S01E03: Raygun Gothic'
-#   color: c37670
-#   h3: Orgy porgy bumblepuppy.
-#   desc: "“<em>Nachtblau</em>, the first album from the famed German producer Hans
-#     Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic
-#     [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo
-#     beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.”"
-#   date: 2017.11.11
-#   avails:
-#   - name: Spotify
-#     href: "#"
-#   - name: Tidal
-#     href: "#"
-#   - name: Bandcamp
-#     href: "#"
-# - 'no': lb005
-#   artist: The Vireos
-#   medium: Audio
-#   title: 'S01E03: Raygun Gothic'
-#   color: c74b25
-#   h3: Orgy porgy bumblepuppy.
-#   desc: "“<em>Nachtblau</em>, the first album from the famed German producer Hans
-#     Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic
-#     [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo
-#     beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.”"
-#   date: 2017.11.11
-#   avails:
-#   - name: Spotify
-#     href: "#"
-#   - name: Tidal
-#     href: "#"
-#   - name: Bandcamp
-#     href: "#"
-# - 'no': lb006
-#   artist: 'Lazerbeams: Tonite<em>!</em>'
-#   medium: Audio
-#   title: 'S01E03: Raygun Gothic'
-#   color: 557f91
-#   h3: Orgy porgy bumblepuppy.
-#   desc: "“<em>Nachtblau</em>, the first album from the famed German producer Hans
-#     Nykvist in over ten years, is a neue-dark-house dancefloor apotheosis. With atmosferic
-#     [sic] pads that blend the mechanist and the humanist amongst a swinging, uptempo
-#     beat, <strong>Gatefolde</strong> refines the paradigmn of headnodding.”"
-#   date: 2017.11.11
-#   avails:
-#   - name: Spotify
-#     href: "#"
-#   - name: Tidal
-#     href: "#"
-#   - name: Bandcamp
-#     href: "#"
+    <p>Bebop '79 is genre bending jazz "duet" from Michael Fanuzzi (drums, guitar, voice) and continuing iterations of His Machine, Lazerbeat (piano, synthesizers).</p>
+
+    <p>The Machine is, at a functional level, a clever means of playing multiple instruments at once, feeding off of the subtleties of percussion and the environment to generate fantastical melodies in response.</p>
+
+    <p>But more than that, there's an unpredictable nature to it that makes it feel truly alive. The Machine is not only reacting, it is in itself creating. Together.</p>
+
+    <p>This premier album was cut from the very first experiment with this real-time conduction technology. Note selection is driven directly by the drums, using a combination of pitch/percussion analysis, first from the drums, and later from the guitar, and even voice. Loops and layers are built, growing ever vaster in scale. The album opens with jaunty march of recursive high synth leads as the drums freely swing below. Later, as synths are changed to pianos ("Pianosolo"), we get a quite modern Scriabin/Jarrett/Iverson mashup. This leads into a piece of soaring poly strings and mallets ("Sky"), which subsequently combines all of the above into a bizarre and beautiful glitch landscape.</p>
+
+    <p>Side B, borne from a single drum click, adds riotous guitar and vocal looping, from punk ("Orgasm") to choral ("Dawn"). In ☁ ▅▒░☼‿☼░▒▅ ☁, piano stabs fall from a sky of dreamy afrique electric guitar. Finally, the drum/piano combo returns once more ("Papi/Pills") for a moment that demonstrates in one way how truly modern jazz can be.</p>
+
+    <p>Here at lazerbea.ms, we endeavor to utilize technology to achieve an artistic transcendence. A futuristic primitivism. Welcome to the opening chapter of BEBOP '79.</p>
+
+    <p>This album was entirely improvised with no overdubs. Recorded live on August 26, 2017 at The Caged Unicorn in Portland, OR.</p>
+  date: 2018.03.06
+  avails:
+  - name: Bandcamp
+    href: "https://lazerbeams.bandcamp.com/album/what-is-bebop-79-where-is"
+  - name: Spotify
+    href: "https://open.spotify.com/album/6gvwYYJnPOkxCVxbYuej46"
+  - name: iTunes
+    href: "https://itunes.apple.com/us/album/what-is-bebop-79-where-is/1357906272?uo=4&app=itunes"
+- 'no': lb004.1
+  artist: "Bebop '79"
+  medium: Video
+  color: 44eb6b
+  h3: Pianosolo / Dark Pictures
+  desc: "<p>For the premier music video of lazerbea.ms, we present Bebop `79's \"Pianosolo / Dark Pictures\". More than simply a document of the performance, it is a visual narrative generated with the same technology that created the audio therein.</p>"
+  date: 2018.03.12
+  avails:
+  - name: Vimeo
+    href: "https://vimeo.com/259726632"
+  - name: YouTube
+    href: "https://youtu.be/kQ69uRLWdfg"
+- 'no': lb005
+  artist: 'Lazerbeams: Tonite<em>!</em>'
+  medium: Audio
+  title: 'S01E03: The Response'
+  color: 009874
+  h3: Pretty Fun.
+  desc: "<p>The third episode of Lazerbeams: Tonite<em>!</em> is parallel lines for parallel times. Side A opens darkly, like gothic remnants in the planetarium. Side B tells the tale of the arpeggiator: it laughs, it loves, it cries in extaxy. Xx4u.</p><p>Recorded live on October 23, 2016 at The Caged Unicorn in Portland, OR. Imagery directly generated from musical performance. #lb2n</p>"
+  date: 2018.04.20
+  avails:
+  - name: Bandcamp
+    href: "https://lazerbeams.bandcamp.com/album/s01e03-the-response"
+  - name: Spotify
+    href: "https://open.spotify.com/album/14WIaEVH6qYAcqcwMhD0Pr"
+  - name: iTunes
+    href: "https://itunes.apple.com/us/album/the-response/1375109737?uo=4&app=itunes"
+
+
