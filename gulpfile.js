@@ -21,6 +21,7 @@ const gulp = require("gulp"),
   path = require('path');
 
 var catalogData = yaml.safeLoad(fs.readFileSync('./catalog.yaml', 'utf8'));
+catalogData.version = + new Date;
 
 var paths = {
   webroot: "./"
