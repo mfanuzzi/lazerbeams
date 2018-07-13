@@ -1,8 +1,7 @@
+@import "colors";
 @import "golden";
 @import "fonts";
-
-$beamPrimary: #d21888;
-$beamSecondary: #18d1bd;
+@import "form";
 
 html, body {
     box-sizing: content-box;
@@ -17,6 +16,10 @@ html, body {
     font-size: nthGolden(8)+vw;
 }
 
+a:focus, input:focus {
+    outline-color: $beamSecondary;
+}
+
 // These rules assume that our "default" is landscape
 .pt { display: none; }
 @media screen and (orientation: portrait) {
@@ -24,11 +27,7 @@ html, body {
     .pt { display: block; }
 }
 
-#catalog-sort li,
-a {
-    color: #000;
-    text-decoration: none;
-
+.flagg {
     &:after  {
         content: '';
         border-top: solid 0.381924em $beamSecondary;
@@ -48,8 +47,15 @@ a {
         &:after  {
             border-top-color: #ddd;
         }        
-    }
+    }    
+}
 
+#catalog-sort li,
+a {
+    color: #000;
+    text-decoration: none;
+
+    @extend .flagg;
 }
 
 h1 {
@@ -212,8 +218,15 @@ p {
     }
 }
 
+// contact
 .page.last {
     margin-top: nthGolden(8)+vw;
+
+    > div:first-child > p:first-child {
+        //background: linear-gradient(to right, #ffffff 0%,#ffffff 91%,#ccc 91%,#ccc 100%);
+        //border-right: solid (nthGolden(9)/2)+vw black;
+        font-varient: italic;
+    }
 
     .logo {
         position: absolute;
