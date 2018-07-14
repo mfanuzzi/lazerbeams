@@ -24,7 +24,10 @@
 
 input {
   border-width: 0.5025vw;
-  margin-top: 0.5025vw; }
+  margin-top: 0.81306vw; }
+  @media screen and (orientation: portrait) {
+    input {
+      margin-top: 2.12862vw; } }
 
 #mce-EMAIL {
   font-family: 'Century Gothic', 'Adventor', sans-serif;
@@ -35,7 +38,8 @@ input {
   text-align: left; }
   @media screen and (orientation: portrait) {
     #mce-EMAIL {
-      font-size: 2.12862vw; } }
+      font-size: 3.44419vw;
+      min-width: 56.23059vw; } }
   #mce-EMAIL:focus {
     outline-width: 1.72209vw; }
 
@@ -45,30 +49,40 @@ input {
   padding-bottom: 1.06431vw;
   font-size: 2.12862vw;
   min-width: 23.6068vw;
-  text-align: left; }
+  text-align: left;
+  background-color: #18d1bd;
+  color: #fff; }
+  @media screen and (orientation: portrait) {
+    #mc-embedded-subscribe {
+      font-size: 3.44419vw; } }
 
-#main #mc_embed_signup input.mce_inline_error {
-  border-color: #d21888; }
-
-#main #mc_embed_signup div.mce_inline_error,
-#main #mc_embed_signup #mce-error-response,
-#main #mc_embed_signup #mce-success-response {
-  margin-top: 0.5025vw;
-  margin-bottom: 0;
-  text-transform: lowercase;
-  background-color: #d21888;
-  padding: 1.06431vw 1.72209vw; }
-  #main #mc_embed_signup div.mce_inline_error:empty,
-  #main #mc_embed_signup #mce-error-response:empty,
-  #main #mc_embed_signup #mce-success-response:empty {
-    display: none; }
-
-#main #mc_embed_signup #mce-error-response,
-#main #mc_embed_signup #mce-success-response {
-  margin-bottom: 0.5025vw; }
-
-#main #mc_embed_signup #mce-success-response {
-  background-color: #18d1bd; }
+#main #mc_embed_signup {
+  padding-top: 1em; }
+  #main #mc_embed_signup input.mce_inline_error {
+    border-color: #d21888; }
+  #main #mc_embed_signup div.mce_inline_error,
+  #main #mc_embed_signup #mce-error-response,
+  #main #mc_embed_signup #mce-success-response {
+    margin-top: 0.81306vw;
+    margin-bottom: 0;
+    min-width: 61.8034vw;
+    text-transform: lowercase;
+    background-color: #d21888;
+    padding: 1.06431vw 1.72209vw; }
+    @media screen and (orientation: portrait) {
+      #main #mc_embed_signup div.mce_inline_error,
+      #main #mc_embed_signup #mce-error-response,
+      #main #mc_embed_signup #mce-success-response {
+        margin-top: 2.12862vw; } }
+    #main #mc_embed_signup div.mce_inline_error:empty,
+    #main #mc_embed_signup #mce-error-response:empty,
+    #main #mc_embed_signup #mce-success-response:empty {
+      display: none; }
+  #main #mc_embed_signup #mce-error-response,
+  #main #mc_embed_signup #mce-success-response {
+    margin-bottom: 0.81306vw; }
+  #main #mc_embed_signup #mce-success-response {
+    background-color: #18d1bd; }
 
 html, body {
   box-sizing: content-box;
