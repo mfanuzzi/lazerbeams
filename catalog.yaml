@@ -208,5 +208,29 @@ catalog:
     href: "https://vimeo.com/281300730"
   - name: YouTube
     href: "https://www.youtube.com/watch?v=ukTJlJDgDyE"
+- 'no': lb009
+  artist: "Bebop '79"
+  medium: Audio
+  title: "bad air for the individual"
+  color: 585c54
+  h3: Innerer Klang
+  desc: |
+    <p><em>"There is music which would need a hundred paintings to express it." -Pound</em></p>
+
+    <p>Music, at its most essential, could be described as a series of tension and release. Our cultures provide means of expression for this in scale, harmony, rhythm: those of us in the west are inculcated with the major/minor keys, the 4/4 beat, polyphony dating back to liturgical chant. It's this last one that provides the most interesting vantage point, preceding the epoch of "western"/"eastern" division. Here there are unities to be found which may be indeed called universal: when singing in unison, we feel the physical perfection of the fifth in its resonance. If we let ourselves be driven by this sensuality, and shape an external energy after our own resonance, we may find there a path to sublimity.</p>
+
+    <p>This is the second full length album from Bebop '79, a performance of Michael Fanuzzi and his machine, LAZERBEAT, that generates melody through the comprehension of the tonal content of percussion.  Functionally, we illustrate that piano, voice, reed and snare are separated only by degree, and the machine can provide a connective tissue (and here the machine has been evolved in several dimensions of complexity from the previous album, "what is bebop '79? where is?", yet still retains a directness: no generative parlor tricks like ML or probabilistic modeling are used). The resultant organism is cybernetic; an extension of human expression through explosion of possibility. Intention flows from the analog to digital and back again in a perfect circle. Awareness is a constant that elevates beyond mimicry into creation.</p>
+
+    <p>Throughout the album, the machine is voiced in a sostenuto, sine-like timbre that individuates it from the human in both form and content. Fanuzzi, at times, uses looping of his voice, sax, guitar and etc. to direct the piece and bring both to different expressions. The key point is that each player here has a voice. This is a duo work in the truest sense, a synthesis not just of motions and electrons, but rather an iteration and evolution of the INNERER KLANG.</p>
+
+    <p>Recorded live on October 10, 2017 and October 10, 2018 at The Caged Unicorn in Portland, OR.</p>
+  date: 2018.10.10
+  avails:
+  - name: Bandcamp
+    href: "https://lazerbeams.bandcamp.com/album/bad-air-for-the-individual"
+  - name: Spotify
+    href: "https://open.spotify.com/album/7E3Az8Kf3SQxZ3iTOfaUo8"
+  - name: iTunes
+    href: "https://itunes.apple.com/us/album/bad-air-for-the-individual/1438828166?uo=4&app=itunes"
 
 
