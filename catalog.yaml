@@ -232,5 +232,30 @@ catalog:
     href: "https://open.spotify.com/album/7E3Az8Kf3SQxZ3iTOfaUo8"
   - name: iTunes
     href: "https://itunes.apple.com/us/album/bad-air-for-the-individual/1438828166?uo=4&app=itunes"
+- 'no': lb010
+  artist: "Evergreen"
+  medium: Audio
+  title: "Painted Mountain/Purple Mountain"
+  color: 5d6f9a
+  h3: 🌲🌲🌲
+  desc: |
+    <p>"Painted Mountain Purple Mountain" is a solo composition by André Bosquet (🌲<em>evergreen</em>🌲🌲🌲) for looped guitar. Its layers a reflection of nature, distance and time, graceful as snow and sharp as daggers. Ride the wave ~~~</p>
 
+    <p>Recorded live at The Caged Unicorn in Portland, OR.</p>
+  date: 2018.12.04
+  avails:
+  - name: Bandcamp
+    href: "https://lazerbeams.bandcamp.com/track/painted-mountain-purple-mountain"
 
+- 'no': lb010.1
+  artist: "Evergreen"
+  medium: Video
+  title: "Painted Mountain/Purple Mountain"
+  color: 790074
+  h3: 🌲🌲🌲
+  desc: |
+    <p>Visualized in response to the music by M. Fanuzzi using LAZERfocus 2.2.-0x #VVVV etc.</p>
+  date: 2018.11.27
+  avails:
+  - name: Vimeo
+    href: "https://vimeo.com/302951595"
