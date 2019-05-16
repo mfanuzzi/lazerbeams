@@ -155,7 +155,7 @@ gulp.task('static', function() {
 
 gulp.task('connect', function () {
   connect.server({
-    root: '.',
+    root: paths.pub,
     livereload: true
   });
 });
