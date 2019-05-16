@@ -24,8 +24,15 @@ var catalogData = yaml.safeLoad(fs.readFileSync('./catalog.yaml', 'utf8'));
 catalogData.version = + new Date;
 
 var paths = {
-  webroot: "./"
+  webroot: "./",
+  pub: "./public/"
 };
+
+paths.static = [
+  paths.webroot + "img/**",
+  paths.webroot + "fonts/**",
+  paths.webroot + "letter/**"
+];
 
 paths.html = paths.webroot + "*.tpl.html";
 paths.catalog = paths.webroot + "img/catalog/*.jpg";
@@ -34,8 +41,9 @@ paths.minJs = paths.webroot + "js/**/*.min.js";
 paths.css = paths.webroot + "css/*.css";
 paths.scss = paths.webroot + "scss/*.scss";
 paths.minCss = paths.webroot + "css/*.min.css";
-paths.concatJsDest = paths.webroot + "js/site.min.js";
-paths.concatCssDest = paths.webroot + "css/site.min.css";
+
+paths.concatJsDest = paths.pub + "js/site.min.js";
+paths.concatCssDest = paths.pub + "css/site.min.css";
 
 gulp.task("clean:js", function (cb) {
   rimraf(paths.concatJsDest, cb);
@@ -85,7 +93,7 @@ gulp.task("min:img", function() {
       console.log(path.dirname);
       path.dirname += "/sm";
     }))
-    .pipe(gulp.dest("./img/catalog"));
+    .pipe(gulp.dest(paths.pub + "/img/catalog"));
 });
 
 
@@ -102,7 +110,7 @@ gulp.task('hb', function () {
         .pipe(rename(function (path) {
           path.basename = path.basename.replace('.tpl', '');
         }))
-        .pipe(gulp.dest('.'));
+        .pipe(gulp.dest(paths.pub));
 });
 
 gulp.task('shares', function () {
@@ -123,7 +131,7 @@ gulp.task('shares', function () {
           .pipe(rename(function (path) {
             path.basename = 'index'
           }))
-          .pipe(gulp.dest(path.join(i.no, a.name.toLowerCase())));
+          .pipe(gulp.dest(path.join(paths.pub, path.join(i.no, a.name.toLowerCase()))));
     }); 
 
     var hbStream = hb()
@@ -136,8 +144,13 @@ gulp.task('shares', function () {
         .pipe(rename(function (path) {
           path.basename = 'index'
         }))
-        .pipe(gulp.dest(i.no));
+        .pipe(gulp.dest(path.join(paths.pub, i.no)));
   }); 
+});
+
+gulp.task('static', function() {
+    gulp.src(paths.static, {base:paths.webroot})
+        .pipe(gulp.dest(paths.pub));
 });
 
 gulp.task('connect', function () {
@@ -146,5 +159,7 @@ gulp.task('connect', function () {
     livereload: true
   });
 });
+
+gulp.task('publish', ['hb', 'shares', 'min', 'min:img', 'static']);
 
 gulp.task('default', ['connect']);
