@@ -6,4 +6,5 @@ css/main.css
 js/site.min.js
 lb*/
 public/
+.firebase/
 
