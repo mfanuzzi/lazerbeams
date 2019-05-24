@@ -160,6 +160,6 @@ gulp.task('connect', function () {
   });
 });
 
-gulp.task('publish', ['hb', 'shares', 'min', 'min:img', 'static']);
+gulp.task('publish', ['sass', 'hb', 'shares', 'min', 'min:img', 'static']);
 
 gulp.task('default', ['connect']);
