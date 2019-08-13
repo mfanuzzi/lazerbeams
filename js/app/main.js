@@ -17,6 +17,36 @@
         //}, 1);
     });
 
+    //Hoverstate/tap cover switching
+    $('.info .imgswitch').on('mouseover touchstart', function (e) {
+        var $cover = $(this).closest('.art').children('img');
+        
+        if (!$cover.data('srcset')) {
+            $cover.data('srcset', $cover.attr('srcset'));
+        }
+
+        $cover.attr('src', $(this).data('url'));
+        $cover.attr('srcset', '');
+
+        if (e.type === 'touchstart') {
+            e.stopPropagation();
+
+            $('body').off('touchstart.is');
+            $('body').one('touchstart.is', function (ee) {
+                if (! $(ee.target).hasClass('imgswitch')) {
+                    $cover.attr('srcset', $cover.data('srcset'));
+                    $cover.attr('src', '');
+                }
+            });
+        }
+    });
+    $('.info .imgswitch').on('mouseout', function () {
+        let $cover = $(this).closest('.art').children('img');
+        $cover.attr('srcset', $cover.data('srcset'));
+        $cover.attr('src', '');
+    });
+
+
     //Sorting and filtering
 	var allMedia = $('.catalog-item').map(function(){ return $(this).attr('data-medium'); }).get();
 	var allArtists = $('.catalog-item').map(function(){ return $(this).attr('data-artist'); }).get();

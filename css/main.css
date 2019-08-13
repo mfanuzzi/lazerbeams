@@ -316,6 +316,8 @@ p.whoa {
       border-left-style: solid;
       border-left-width: 0.81306vw;
       border-bottom: solid 0.81306vw #d21888; }
+      #catalog-items > div .info .imgswitch {
+        text-decoration: underline; }
       #catalog-items > div .info .desc,
       #catalog-items > div .info .desc p,
       #catalog-items > div .info .desc + h4 {

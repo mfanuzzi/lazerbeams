@@ -31,7 +31,7 @@ catalog:
   date: 2017.11.11
   avails:
   - name: Internet
-    href: "http://lazerbea.ms"
+    href: "https://lazerbea.ms"
 - 'no': lb001
   artist: 'Lazerbeams: Tonite<em>!</em>'
   medium: Audio
@@ -282,3 +282,23 @@ catalog:
     href: "https://vimeo.com/302951595"
   - name: YouTube
     href: "https://www.youtube.com/watch?v=J-mvX5tQ3yE"
+- 'no': lb011
+  artist: Lazerbeams
+  medium: Interactive
+  title: "KWEEBz: unimaginable, supercosmic, eternal somethings"
+  color: e24309
+  h3: "An <span class='imgswitch' data-url='/img/lb011/eye2.png'>immersive</span>, <span class='imgswitch' data-url='/img/lb011/gore.png'>interactive</span> <span class='imgswitch' data-url='/img/lb011/face.png'>transmogrification</span> <span class='imgswitch' data-url='/img/lb011/face2.png'>experience</span>, <span class='imgswitch' data-url='/img/lb011/face3.png'>based upon</span> <span class='imgswitch' data-url='/img/lb011/facefucked.png'>actual events</span>."
+  desc: "<p>Your face as it appears in a dream: angular/pliable, floatable/floored. This is a KWEEB, and it's a dream that's fell from the sky, where all dreams live. Like all dreams, they are born in mid-air.</p>
+  <p>But KWEEBz are heavy lil thins, and a KWEEB'z destiny is to fall, you see. To go <em>sploosh!</em> and tumble apart. And to be sucked into the floor below. (how does the idea of <em>floor</em> differ for sky-borne beings?)</p>
+  <p><em>[sry lil kweeby!]</em></p>
+  <p>oh but here's the why no to sorry!: the world of KWEEBz is a world of infinite renewal! for every KWEEB is laust, anoth is born in itz IMG!</p>
+  <p><em>Is this the point? That all our new ideas are just reshapings of our old experiences + former selves + time + gravity?</em></p>
+  <p>The game is to adjust your perspective. Your gaze is a force, and contains gravity. But be mindful that sometimes, looking closer pushes things further away.</p>
+  <p><strong>(on desktop)</strong> click and drag to change your perspective (middlemouse to zoom) or press any keyboard key to shift to try a random one. double-click to freeze a moment, and save a screenshot.</p>
+  <p><strong>(on mobile)</strong> rotate your phone!!!, and/or tap and drag to change your perspective. two fingers to zoom. three to shift to try a rando. fourfinger-touch to freeze a moment, and save a screenshot.</p>
+  <p>Please enjoy this premier generative audiovisual interactive experience from your friends at lazerbea.ms!</p>
+    "
+  date: 2019.08.12
+  avails:
+  - name: Internet
+    href: "https://lazerbea.ms/lb011"

@@ -339,6 +339,11 @@ p.whoa {
             border-left-width: nthGolden(10)*1vw;
             border-bottom: solid nthGolden(10)*1vw $beamPrimary;
 
+
+            .imgswitch {
+                text-decoration: underline;
+            }
+
             .desc,
             .desc p,
             .desc + h4 {
