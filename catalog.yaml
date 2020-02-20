@@ -8,7 +8,7 @@ media:
 - Words
 artists:
 - Bebop '79
-- Evergreen
+- Bosq-A
 - Gatefolde
 - 'Lazerbeams: Tonite<em>!</em>'
 - Marcello Marcello
@@ -249,7 +249,7 @@ catalog:
   - name: Medium
     href: "https://medium.com/@fanuzzi/electric-sculpture-bebop-79-5a832dd304e1"
 - 'no': lb010
-  artist: "Evergreen"
+  artist: "Bosq-A"
   medium: Audio
   title: "Painted Mountain/Purple Mountain"
   color: 5d6f9a
@@ -267,7 +267,7 @@ catalog:
   - name: iTunes
     href: "https://itunes.apple.com/us/album/painted-mountain-purple-mountain-ep/1444741759?uo=4&app=itunes"
 - 'no': lb010.1
-  artist: "Evergreen"
+  artist: "Bosq-A"
   medium: Video
   title: "Painted Mountain/Purple Mountain"
   color: 790074
@@ -301,4 +301,64 @@ catalog:
   date: 2019.08.12
   avails:
   - name: Internet
-    href: "https://lazerbea.ms/lb011"
+    href: "https://lazerbea.ms/lb011/"
+  - name: Vimeo (trailer)
+    href: "https://vimeo.com/lazerbeams/kweebz"
+- 'no': lb012
+  artist: "Gatefolde"
+  medium: Audio
+  title: "x"
+  color: 73075c
+  h3: xxx
+  desc: |
+    <p>In honour of XOXO Festival 2K19, lazerbea.ms presents this new EP-length exploration in extended modular sound. #hardtechnocoreacidhousefunkstrial</p>
+
+    <p>Contains: vcv rack, korg poly-61, hammond m-100, bass, drum kit, alto sax, voice, bells, egg, clave</p>
+  date: 2019.09.05
+  avails:
+  - name: Bandcamp
+    href: "https://lazerbeams.bandcamp.com/album/x"
+  - name: Spotify
+    href: "https://open.spotify.com/album/3E2u2sCbmp3P8cXhdFqmyR"
+  - name: iTunes
+    href: "https://music.apple.com/us/album/x-ep/1479114238?uo=4&app=apple+music"
+- 'no': lb013
+  artist: "Bosq-A"
+  medium: Audio
+  title: "Wind-Water"
+  color: 73075c
+  h3: 💦💦💦
+  desc: |
+    <p>A collection of two new solo works of environmental music from M. A. Bosquet. Quite different, yet complimentary in their exploration of space.</p>
+  date: 2020.02.22
+  avails:
+  - name: Bandcamp
+    href: "https://lazerbeams.bandcamp.com/album/wind-water"
+- 'no': lb013.1
+  artist: "Bosq-A"
+  medium: Video
+  title: "Wind"
+  color: 73075c
+  h3: A call to all.
+  desc: |
+    <p>solo overtone chant via saxophone chamber</p>
+  date: 2020.01.16
+  avails:
+  - name: Vimeo
+    href: "https://vimeo.com/lazerbeams/wind"
+- 'no': lb013.2
+  artist: "Bosq-A"
+  medium: Video
+  title: "Water (Aesthetic House)"
+  color: 73075c
+  h3: this music makes architecture
+  desc: |
+    <p>"architecture is frozen music" - gertah<br />
+    music = architecture / freeze ?<br />
+    <em>baby is cold outside</em></p>
+
+    <p>Visualized</p>
+  date: 2020.02.03
+  avails:
+  - name: Vimeo
+    href: "https://vimeo.com/lazerbeams/aesthetic"

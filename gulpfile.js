@@ -66,7 +66,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.js, ['min:js']);
 });
 
-gulp.task("clean", ["clean:js", "clean:css"]);
+gulp.task("clean", gulp.parallel("clean:js", "clean:css"));
 
 gulp.task("min:js", function () {
   return gulp.src([paths.js, "!" + paths.minJs], { base: "." })
@@ -97,7 +97,7 @@ gulp.task("min:img", function() {
 });
 
 
-gulp.task("min", ["min:js", "min:css"]);
+gulp.task("min", gulp.parallel("min:js", "min:css"));
 
 gulp.task('hb', function () {
     var hbStream = hb()
@@ -160,6 +160,6 @@ gulp.task('connect', function () {
   });
 });
 
-gulp.task('publish', ['sass', 'hb', 'shares', 'min', 'min:img', 'static']);
+gulp.task('publish', gulp.series('sass', 'hb', 'shares', 'min', 'min:img', 'static'));
 
-gulp.task('default', ['connect']);
+gulp.task('default', gulp.series('connect'));
