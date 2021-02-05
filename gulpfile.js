@@ -20,7 +20,7 @@ const gulp = require("gulp"),
   imagemin = require('gulp-imagemin'),
   path = require('path');
 
-var catalogData = yaml.safeLoad(fs.readFileSync('./catalog.yaml', 'utf8'));
+var catalogData = yaml.load(fs.readFileSync('./catalog.yaml', 'utf8'));
 catalogData.version = + new Date;
 
 var paths = {
