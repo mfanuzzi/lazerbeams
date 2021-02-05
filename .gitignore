@@ -1,6 +1,5 @@
 node_modules
 .DS_Store
-index.html
 css/main.css
 js/site.min.js
 .firebase/
