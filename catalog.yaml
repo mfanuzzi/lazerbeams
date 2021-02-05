@@ -17,7 +17,7 @@ catalog:
 - 'no': lb000
   artist: Lazerbeams
   medium: Interactive
-  title: http://lazerbea.ms
+  title: https://lazerbea.ms
   color: d21888
   h3: Tools to slow down the consumption of existence.
   desc: "<p>The greatest irony of the digital age is that we are constantly surrounded by devices which could free us, yet instead enslave us.</p>
