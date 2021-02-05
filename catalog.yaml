@@ -326,19 +326,21 @@ catalog:
   artist: "Bosq-A"
   medium: Audio
   title: "Wind-Water"
-  color: 73075c
+  color: 6a6f69
   h3: 💦💦💦
   desc: |
     <p>A collection of two new solo works of environmental music from M. A. Bosquet. Quite different, yet complimentary in their exploration of space.</p>
   date: 2020.02.22
   avails:
+  - name: Spotify
+    href: "https://open.spotify.com/album/0Z8W7ddRk2Q5SGmjMAhIDi"
   - name: Bandcamp
     href: "https://lazerbeams.bandcamp.com/album/wind-water"
 - 'no': lb013.1
   artist: "Bosq-A"
   medium: Video
   title: "Wind"
-  color: 73075c
+  color: 6f8757
   h3: A call to all.
   desc: |
     <p>solo overtone chant via saxophone chamber</p>
@@ -350,7 +352,7 @@ catalog:
   artist: "Bosq-A"
   medium: Video
   title: "Water (Aesthetic House)"
-  color: 73075c
+  color: 483d5b
   h3: this music makes architecture
   desc: |
     <p>"architecture is frozen music" - gertah<br />
@@ -362,3 +364,30 @@ catalog:
   avails:
   - name: Vimeo
     href: "https://vimeo.com/lazerbeams/aesthetic"
+- 'no': lb014
+  artist: "Blichael Moomberg Quartet"
+  medium: Audio
+  title: "(It's More Like Performance Art, Really)"
+  color: 95acb0
+  h3: Coke 'n' Windows
+  desc: |
+    <p><em>A brilliant showing of talents this evening, no #debate about it!</em></p>
+
+    <p>Truthfully, this has nothing to do with current events, except in the sense that it is an <em>au-courant</em> emotion pulled from the strange mind of Fanuzzi, who is still learning what his own work -  especially work of this sort that seems to materialize from the air - "means" in the static sense.</p>
+
+    <p>Recorded live at the Caged Unicorn in a series of layers built up in an evening in single takes.</p>
+
+    <p>(With apologies and homage to Old and New Dreams, forever my inspiration)</p>
+
+    <p>Blichael Moomberg - sassophone, voices<br />
+    Florence Leah - yee<br />
+    Hal Bchae'Oo - thumpets<br />
+    Zim Gerbmo - booms </p>
+  date: 2020.02.03
+  avails:
+  - name: Bandcamp
+    href: "https://lazerbeams.bandcamp.com/track/its-more-like-performance-art-really"
+  - name: Vimeo
+    href: "https://vimeo.com/392607511"
+  - name: YouTube
+    href: "https://www.youtube.com/watch?v=XPypn4J_n8Q"

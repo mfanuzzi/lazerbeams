@@ -1,5 +1,12 @@
 {
-    "devDependencies": {
+    "name": "lazerbeams",
+    "private": true,
+    "description": "lazerbea.ms",
+    "version": "0.0.69",  
+    "scripts": {
+        "build": "gulp publish"
+    },
+    "dependencies": {
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-connect": "^5.7.0",
