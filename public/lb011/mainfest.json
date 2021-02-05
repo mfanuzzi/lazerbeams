@@ -1,0 +1,21 @@
+﻿{
+    "author": "lazerbea.ms",
+    "developer": {
+        "name": "fanuzzi",
+        "url": "https://fanuzzi.com"
+    },
+    "homepage_url": "https://lazerbea.ms",
+    "version": "0.1",
+    "short_name": "LB011",
+    "name": "unimaginable, supercosmic, eternal somethings",
+    "icons": [
+        {
+            "src": "https://lazerbea.ms/img/favicon128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "https://lazerbea.ms/lb011",
+    "display": "standalone",
+    "orientation": "portrait"
+}
