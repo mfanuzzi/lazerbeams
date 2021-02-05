@@ -2,7 +2,7 @@
     "name": "lazerbeams",
     "private": true,
     "description": "lazerbea.ms",
-    "version": "0.0.69",  
+    "version": "0.0.69",
     "scripts": {
         "build": "gulp publish"
     },
