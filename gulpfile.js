@@ -115,7 +115,7 @@ gulp.task('hb', function () {
 
 gulp.task('shares', function (taskcomplete) {
   // For each catalog item, create a share page for each available href
-  catalogData.catalog.forEach(function(i){
+  catalogData.catalog.filter(i => i.no !== 'lb011').forEach(function(i){
     i.avails.forEach(function (a) {
 
       Object.assign(a, i);
