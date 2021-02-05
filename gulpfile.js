@@ -151,7 +151,7 @@ gulp.task('shares', function (taskcomplete) {
 });
 
 gulp.task('static', function() {
-    gulp.src(paths.static, {base:paths.webroot})
+    return gulp.src(paths.static, {base:paths.webroot})
         .pipe(gulp.dest(paths.pub));
 });
 
