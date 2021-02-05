@@ -113,7 +113,7 @@ gulp.task('hb', function () {
         .pipe(gulp.dest(paths.pub));
 });
 
-gulp.task('shares', function () {
+gulp.task('shares', function (taskcomplete) {
   // For each catalog item, create a share page for each available href
   catalogData.catalog.forEach(function(i){
     i.avails.forEach(function (a) {
@@ -145,7 +145,9 @@ gulp.task('shares', function () {
           path.basename = 'index'
         }))
         .pipe(gulp.dest(path.join(paths.pub, i.no)));
-  }); 
+  });
+
+  taskcomplete();
 });
 
 gulp.task('static', function() {
