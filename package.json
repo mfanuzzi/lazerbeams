@@ -4,7 +4,8 @@
     "description": "lazerbea.ms",
     "version": "0.0.69",
     "scripts": {
-        "build": "gulp publish"
+        "build": "gulp publish",
+        "serve": "gulp"
     },
     "dependencies": {
         "gulp": "4.0.2",

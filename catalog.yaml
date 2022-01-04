@@ -392,3 +392,45 @@ catalog:
         href: "https://vimeo.com/392607511"
       - name: YouTube
         href: "https://www.youtube.com/watch?v=XPypn4J_n8Q"
+  - "no": lb015
+    artist: "Bosq-A"
+    medium: Audio
+    title: "¿why"
+    color: 7b5b80
+    h3: "or: \"¿𝘸𝘩𝘺 𝘤𝘰𝘮 𝘸𝘰𝘳𝘭𝘥 𝘯𝘰𝘸 𝘮𝘪𝘳𝘳𝘰𝘳 𝘰𝘮’𝘪𝘯𝘴𝘪𝘥𝘦𝘴\""
+    desc: |
+      <p>a meditation on newfound alignment btwn the world-as-i-experience-it and the world-as-it-is</p>
+      <p>[a quarenteen composition]</p>
+      <p>recorded live, march 2020 @ caged unicorn studios, portland</p>
+      <p>a.b. - voice, flute<br />
+      m.f. - keys, organ </p>
+    date: 2020.05.05
+    avails:
+      - name: Bandcamp
+        href: "https://lazerbeams.bandcamp.com/album/why"
+      - name: Spotify
+        href: "https://open.spotify.com/album/21ErIfXwyidWcClkAYBnSO"
+      - name: Vimeo
+        href: "https://vimeo.com/lazerbeams/why"
+      - name: YouTube
+        href: "https://www.youtube.com/watch?v=vIBEajcJ3v4"
+  - "no": lb016
+    artist: "Bebop '79"
+    medium: Audio
+    title: "It Was a Very Good Year"
+    color: 484b42
+    h3: "(2020 version)"
+    desc: |
+      <p>A re-contextualization of a song about privilege and toxic masculinity into a ballad of the millennial for whom 17 meant 9/11 and 35 meant coronavirus.</p>
+      <p>Based on a true story.</p>
+      <p>Arranged, played and produced in social distance by Fanuzzi.</p>
+    date: 2021.01.01
+    avails:
+      - name: Bandcamp
+        href: "https://lazerbeams.bandcamp.com/track/it-was-a-very-good-year-2020-version"
+      - name: Spotify
+        href: "https://open.spotify.com/album/6EeriphGUK05J975Hsw9KI"
+      - name: Vimeo
+        href: "https://vimeo.com/lazerbeams/vgood"
+      - name: YouTube
+        href: "https://youtu.be/MJnTZnMPzmM"
