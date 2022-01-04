@@ -1,5 +1,5 @@
 # lazerbeams
-http://lazerbea.ms 1.0
+https://lazerbea.ms 1.0
 
 Static site generated via handlebars. Content in YAML.
 
