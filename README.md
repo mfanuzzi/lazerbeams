@@ -10,6 +10,7 @@ To watch CSS/JS changes:
 `gulp watch`
 
 To process images:
+(note: make sure `imagemagick` is installed)
 `gulp min:img`
 
 To rebuild index page from yml:
