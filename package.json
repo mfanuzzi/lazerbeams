@@ -5,7 +5,8 @@
     "version": "0.0.69",
     "scripts": {
         "build": "gulp publish",
-        "serve": "gulp"
+        "serve": "gulp",
+        "dev": "gulp"
     },
     "dependencies": {
         "gulp": "4.0.2",

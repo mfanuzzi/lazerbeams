@@ -434,3 +434,45 @@ catalog:
         href: "https://vimeo.com/lazerbeams/vgood"
       - name: YouTube
         href: "https://youtu.be/MJnTZnMPzmM"
+  - "no": lb017
+    artist: "Gatefolde"
+    medium: Audio
+    title: "O"
+    color: 484b42
+    h3: "oOoOoOo"
+    desc: |
+      <p>GATEFOLDE is analog techno that might sound like a HÖR livestream x john zorn x atari teenage riot?</p>
+      <p>this album was made in homage to the XOXO festival which I love and deeply miss. it is somewhat a sequal to 2019's "x", which was inspired directly by a chance connection at that same festival, but takes the concepts much further.</p>
+      <p>while written and composed mostly via modular synthesis, the goal with this project is a physical, dynamic, [f/p]unk feeling- singing or dancing or yelling in a loud industrial space with other sweaty people. in some instances the electronic noises are joined by physical ones with elaborate arrangements. on others i tried to make synths that responded to other synths to form their own little worlds.</p>
+      <p>released as a deluxe, professional cassette in a limited edition of 100!</p>
+    date: 2022.01.22
+    avails:
+      - name: Bandcamp
+        href: "https://lazerbeams.bandcamp.com/album/o"
+      - name: Spotify
+        href: "https://open.spotify.com/album/0GS6xUpwwGuHyO6nEAijuL"
+      - name: Apple Music
+        href: "https://music.apple.com/us/album/o/1597968127"
+    reviews:
+      - name: Queen City Sounds and Art
+        href: https://queencitysoundsandart.wordpress.com/2022/01/20/gatefoldes-video-for-slit-scan-is-a-stop-motion-model-of-the-ravages-of-late-capitalism-on-the-collective-human-psyche/
+  - "no": lb017.1
+    artist: "Gatefolde"
+    medium: Video
+    title: "slit scan"
+    color: 484b42
+    h3: "meet jeff"
+    desc: |
+      <p><em>slit scan</em> is the lead track off hardcore-techno-meets-jazz LP, "O". It is named after the cinematography technique used by Stanley Kubrik in the Stargate sequence of 2001: A Space Odyssey, in which the astronaut is drawn into an intense psychedelic space, perhaps being physically pulled apart by gravity, which is an energy the artist strongly felt during the composition of this piece. Raging sublimation let's say. But a melodic one.</p>
+      <p>The video features three rather vile creatures that emerged from the id and may or may not stand in for the horrors of the current moment of isolation and late capitalism (let's call him "Jeff") performing a interpretive dance choreographed and performed by the artist, captured via DIY motion-capture. We think they might express what this project is about better than words can. There's a lot of anger in there, but also a lot of love. Sometimes in the same track.</p>
+    date: 2022.01.11
+    avails:
+      - name: Bandcamp
+        href: "https://lazerbeams.bandcamp.com/album/o"
+      - name: Vimeo
+        href: "https://vimeo.com/lazerbeams/meet-jeff"
+      - name: YouTube
+        href: "https://www.youtube.com/watch?v=qGkcnn1PrZ8"
+    reviews:
+      - name: Queen City Sounds and Art
+        href: https://queencitysoundsandart.wordpress.com/2022/01/20/gatefoldes-video-for-slit-scan-is-a-stop-motion-model-of-the-ravages-of-late-capitalism-on-the-collective-human-psyche/
