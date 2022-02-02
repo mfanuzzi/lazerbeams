@@ -476,3 +476,15 @@ catalog:
     reviews:
       - name: Queen City Sounds and Art
         href: https://queencitysoundsandart.wordpress.com/2022/01/20/gatefoldes-video-for-slit-scan-is-a-stop-motion-model-of-the-ravages-of-late-capitalism-on-the-collective-human-psyche/
+  - "no": lb017.2
+    artist: "Gatefolde"
+    medium: Objects
+    title: "'o' ltd. edition cassette"
+    color: 97396f
+    h3: "lazerbea.ms' first analog media release!"
+    desc: |
+      <p>Professionally duped on RTM911 tape. Windowless, pad-printed white cassette in a burgundy case. Triple-panel J-card featuring centerfold of Jeff. Mastered especially for cassette for superior dynamics. This is a really fucking nice cassette. Limited edition of 100!</p>
+    date: 2022.02.02
+    avails:
+      - name: Bandcamp
+        href: "https://lazerbeams.bandcamp.com/album/o"
