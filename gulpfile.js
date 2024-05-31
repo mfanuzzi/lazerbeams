@@ -1,39 +1,32 @@
-/// <binding BeforeBuild='clean' Clean='clean' ProjectOpened='watch, default' />
-"use strict";
+const gulp = require("gulp");
+const { rimraf } = require("rimraf");
+const concat = require("gulp-concat");
+const cssmin = require("gulp-cssmin");
+const uglify = require("gulp-uglify");
+const sass = require("gulp-sass")(require("sass"));
+const connect = require("gulp-connect");
+const sort = require("gulp-sort");
+const hb = require("gulp-hb");
+const rename = require("gulp-rename");
+const yaml = require("js-yaml");
+const fs = require("fs");
+const imageResize = require("gulp-image-resize");
+const path = require("path");
 
-//var catalogData = require("./catalog.json");
-//console.log(catalogData.catalog[0].desc);
-
-const gulp = require("gulp"),
-  rimraf = require("rimraf"),
-  concat = require("gulp-concat"),
-  cssmin = require("gulp-cssmin"),
-  uglify = require("gulp-uglify"),
-  sass = require("gulp-sass"),
-  connect = require('gulp-connect'),
-  sort = require('gulp-sort'),
-  hb = require('gulp-hb'),
-  rename = require('gulp-rename'),
-  yaml = require('js-yaml'),
-  fs   = require('fs'),
-  imageResize = require('gulp-image-resize'),
-  imagemin = require('gulp-imagemin'),
-  path = require('path');
-
-var catalogData = yaml.load(fs.readFileSync('./catalog.yaml', 'utf8'));
-catalogData.version = + new Date;
+const d = fs.readFileSync("./catalog.yaml", "utf8");
+var catalogData = yaml.load(d);
+catalogData.version = +new Date();
 
 var paths = {
   webroot: "./",
-  pub: "./public/"
+  pub: "./public/",
 };
 
 paths.static = [
   paths.webroot + "img/**",
   paths.webroot + "fonts/**",
-  paths.webroot + "letter/**"
+  paths.webroot + "letter/**",
 ];
-
 paths.html = paths.webroot + "*.tpl.html";
 paths.catalog = paths.webroot + "img/catalog/*.jpg";
 paths.js = paths.webroot + "js/**/*.js";
@@ -41,127 +34,120 @@ paths.minJs = paths.webroot + "js/**/*.min.js";
 paths.css = paths.webroot + "css/*.css";
 paths.scss = paths.webroot + "scss/*.scss";
 paths.minCss = paths.webroot + "css/*.min.css";
-
 paths.concatJsDest = paths.pub + "js/site.min.js";
 paths.concatCssDest = paths.pub + "css/site.min.css";
 
-gulp.task("clean:js", function (cb) {
-  rimraf(paths.concatJsDest, cb);
+gulp.task("clean:js", async () => {
+  return new Promise((resolve, reject) => {
+    rimraf(paths.concatJsDest).catch(reject).then(resolve);
+  });
 });
 
-gulp.task("clean:css", function (cb) {
-  rimraf(paths.concatCssDest, cb);
+gulp.task("clean:css", async () => {
+  return new Promise((resolve, reject) => {
+    rimraf(paths.concatCssDest).catch(reject).then(resolve);
+  });
 });
 
-gulp.task('sass', function () {
-    return gulp.src(paths.scss)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest("./css"))
-        .pipe(connect.reload());
+gulp.task("sass", function () {
+  console.log("Starting SASS compilation");
+  return gulp
+    .src(paths.scss)
+    .on("data", (file) => console.log(`Processing file: ${file.path}`))
+    .pipe(
+      sass().on("error", (err) => {
+        console.error("SASS compilation error:", err);
+        process.exit(1);
+      })
+    )
+    .pipe(gulp.dest("./css"))
+    .on("end", () => console.log("SASS compilation completed"));
 });
 
-gulp.task('watch', function () {
-    gulp.watch(paths.scss, ['sass']);
-    gulp.watch([paths.html, "./catalog.yaml"], ['hb', ]);
-    gulp.watch(paths.js, ['min:js']);
+gulp.task("watch", function () {
+  gulp.watch(paths.scss, gulp.series("sass"));
+  gulp.watch([paths.html, "./catalog.yaml"], gulp.series("hb"));
+  gulp.watch(paths.js, gulp.series("min:js"));
 });
 
 gulp.task("clean", gulp.parallel("clean:js", "clean:css"));
 
-gulp.task("min:js", function () {
-  return gulp.src([paths.js, "!" + paths.minJs], { base: "." })
-    .pipe(sort({asc: false}))
+gulp.task("min:js", () =>
+  gulp
+    .src([paths.js, "!" + paths.minJs], { base: "." })
+    .pipe(sort({ asc: false }))
     .pipe(concat(paths.concatJsDest))
-    //.pipe(uglify())
-    .pipe(gulp.dest("."));
-});
+    .pipe(uglify())
+    .pipe(gulp.dest("."))
+);
 
-gulp.task("min:css", function () {
-  return gulp.src([paths.css, "!" + paths.minCss])
+gulp.task("min:css", () =>
+  gulp
+    .src([paths.css, "!" + paths.minCss])
     .pipe(concat(paths.concatCssDest))
     .pipe(cssmin())
-    .pipe(gulp.dest("."));
-});
+    .pipe(gulp.dest("."))
+);
 
-gulp.task("min:img", function() {
-  return gulp.src([paths.catalog])
+gulp.task("min:img", () =>
+  gulp
+    .src([paths.catalog])
     .pipe(imageResize({ width: 800 }))
-    // .pipe(imagemin({
-    //   progressive: true
-    // }))
-    .pipe(rename(function (path) {
-      console.log(path.dirname);
-      path.dirname += "/sm";
-    }))
-    .pipe(gulp.dest(paths.pub + "/img/catalog"));
-});
-
+    .pipe(
+      rename(function (path) {
+        console.log(path.dirname);
+        path.dirname += "/sm";
+      })
+    )
+    .pipe(gulp.dest(paths.pub + "/img/catalog"))
+);
 
 gulp.task("min", gulp.parallel("min:js", "min:css"));
 
-gulp.task('hb', function () {
-    var hbStream = hb()
-      //.helpers(require('handlebars-helper-svg'))
-      .data(catalogData);
+gulp.task("hb", () =>
+  gulp
+    .src("./index.tpl.html")
+    .pipe(hb().data(catalogData))
+    .pipe(
+      rename(function (path) {
+        path.basename = path.basename.replace(".tpl", "");
+      })
+    )
+    .pipe(gulp.dest(paths.pub))
+);
 
-    return gulp
-        .src('./index.tpl.html')
-        .pipe(hbStream)
-        .pipe(rename(function (path) {
-          path.basename = path.basename.replace('.tpl', '');
-        }))
-        .pipe(gulp.dest(paths.pub));
-});
-
-gulp.task('shares', function (taskcomplete) {
-  // For each catalog item, create a share page for each available href
-  catalogData.catalog.filter(i => i.no !== 'lb011').forEach(function(i){
-    i.avails.forEach(function (a) {
-
+gulp.task("shares", async function () {
+  for (const i of catalogData.catalog.filter((i) => i.no !== "lb011")) {
+    for (const a of i.avails) {
       Object.assign(a, i);
-      a.artist = a.artist.replace(/(<([^>]+)>)/ig,"");
-
-      var hbStream = hb()
-        //.helpers(require('handlebars-helper-svg'))
-        .data(a);
-
-      gulp
-          .src('./share.tpl.html')
-          .pipe(hbStream)
-          .pipe(rename(function (path) {
-            path.basename = 'index'
-          }))
-          .pipe(gulp.dest(path.join(paths.pub, path.join(i.no, a.name.toLowerCase()))));
-    }); 
-
-    var hbStream = hb()
-      //.helpers(require('handlebars-helper-svg'))
-      .data(i);
-
-    gulp
-        .src('./item.tpl.html')
-        .pipe(hbStream)
-        .pipe(rename(function (path) {
-          path.basename = 'index'
-        }))
-        .pipe(gulp.dest(path.join(paths.pub, i.no)));
-  });
-
-  taskcomplete();
+      a.artist = a.artist.replace(/(<([^>]+)>)/gi, "");
+      await new Promise((resolve, reject) => {
+        gulp
+          .src("./share.tpl.html")
+          .pipe(hb().data(a))
+          .pipe(rename({ basename: "index" }))
+          .pipe(gulp.dest(path.join(paths.pub, i.no, a.name.toLowerCase())))
+          .on("end", resolve)
+          .on("error", reject);
+      });
+    }
+  }
 });
 
-gulp.task('static', function() {
-    return gulp.src(paths.static, {base:paths.webroot})
-        .pipe(gulp.dest(paths.pub));
-});
+gulp.task("static", () =>
+  gulp.src(paths.static, { base: paths.webroot }).pipe(gulp.dest(paths.pub))
+);
 
-gulp.task('connect', function () {
+gulp.task("connect", () =>
   connect.server({
     root: paths.pub,
-    livereload: true
-  });
-});
+    livereload: true,
+  })
+);
 
-gulp.task('publish', gulp.series('sass', 'hb', 'shares', 'min', 'min:img', 'static'));
+gulp.task(
+  "publish",
+  gulp.series("clean", "sass", "hb", "shares", "min", "min:img", "static")
+);
 
-gulp.task('default', gulp.series('connect'));
+gulp.task("default", gulp.series("connect"));

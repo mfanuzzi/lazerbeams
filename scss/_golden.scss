@@ -1,20 +1,21 @@
-﻿/// Dynamic golden ratio calculations based upon vw
+﻿@use "sass:math";
+
+/// Dynamic golden ratio calculations based upon vw
 $phi: 1.6180339887498948482; // ((1 + sqrt(5)) / 2);
-$phil : 1 / $phi;
+$phil: math.div(1, $phi);
 
-@function nthGolden($n, $base:100) {
-    $result: ($base / $phi);
-    $n: $n - 1;
-    //$result : 100;
+@function nthGolden($n, $base: 100) {
+  $result: math.div($base, $phi);
+  $n: $n - 1;
+  //$result : 100;
 
-    //@debug $result;
-    //@debug $n;
-    
-    @if ($n > 0) {
-        @return nthGolden($n, $result) 
-    } @else {
-        //@debug 'hi';
-        @return $result;
-    }
+  //@debug $result;
+  //@debug $n;
+
+  @if ($n > 0) {
+    @return nthGolden($n, $result);
+  } @else {
+    //@debug 'hi';
+    @return $result;
+  }
 }
-

@@ -1,145 +1,161 @@
+@use "sass:math";
+
 @import "colors";
 @import "golden";
 @import "fonts";
 @import "form";
 
-html, body {
-    box-sizing: content-box;
-    font-family: 'Century Gothic', 'Adventor', sans-serif;
-    margin: 0;
+html,
+body {
+  box-sizing: content-box;
+  font-family: "Century Gothic", "Adventor", sans-serif;
+  margin: 0;
 
-    @media screen and (orientation: portrait) {
-        font-size: nthGolden(7)+vw;
-    }
+  @media screen and (orientation: portrait) {
+    font-size: nthGolden(7) + vw;
+  }
 
-    font-size: nthGolden(8)+vw;
+  font-size: nthGolden(8) + vw;
 }
 
-a:focus, input:focus {
-    outline-color: $beamSecondary;
+a:focus,
+input:focus {
+  outline-color: $beamSecondary;
 }
 
 // These rules assume that our "default" is landscape
-.pt { display: none; }
+.pt {
+  display: none;
+}
 @media screen and (orientation: portrait) {
-    .ls { display: none; }
-    .pt { display: block; }
+  .ls {
+    display: none;
+  }
+  .pt {
+    display: block;
+  }
 }
 
 .flagg {
-    &:after  {
-        content: '';
-        border-top: solid 0.381924em $beamSecondary;
-        position: absolute;
-        height: 0.381924em;
-        width: 1em;
-        position: absolute;
+  &:after {
+    content: "";
+    border-top: solid 0.381924em $beamSecondary;
+    position: absolute;
+    height: 0.381924em;
+    width: 1em;
+    position: absolute;
+  }
+  &:hover {
+    transition: border-top-color 0.3s;
+    color: $beamSecondary;
+    &:after {
+      border-top-color: $beamPrimary;
     }
-    &:hover {
-        transition: border-top-color .3s;
-        color: $beamSecondary;
-        &:after  {
-            border-top-color: $beamPrimary;
-        }
+  }
+  &.inactive {
+    &:after {
+      border-top-color: #ddd;
     }
-    &.inactive {
-        &:after  {
-            border-top-color: #ddd;
-        }        
-    }    
+  }
 }
 
 #catalog-sort li,
 a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 
-    @extend .flagg;
+  @extend .flagg;
 }
 
 h1 {
-    font-size: nthGolden(5)+vw;
+  font-size: nthGolden(5) + vw;
 }
 h2 {
-    font-weight: normal;
-    font-size: nthGolden(6)+vw;
-
+  font-weight: normal;
+  font-size: nthGolden(6) + vw;
 }
 h3 {
-    font-weight: normal;
-    font-size: nthGolden(7)+vw;
+  font-weight: normal;
+  font-size: nthGolden(7) + vw;
 
-    @media screen and (orientation: portrait) {
-        font-size: nthGolden(6)+vw;
-    }
+  @media screen and (orientation: portrait) {
+    font-size: nthGolden(6) + vw;
+  }
 }
 h4 {
-    font-size: nthGolden(8)+vw;
-    text-align: justify;
+  font-size: nthGolden(8) + vw;
+  text-align: justify;
 
-    @media screen and (orientation: portrait) {
-        font-size: nthGolden(7)+vw;
-    }
+  @media screen and (orientation: portrait) {
+    font-size: nthGolden(7) + vw;
+  }
 }
 
 h2 + p {
-    margin-top: nthGolden(7)+vw;
+  margin-top: nthGolden(7) + vw;
 }
 
-h1, h2, h3, h4, p {
-    margin: 0;
-    line-height: 1;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  line-height: 1;
 }
 p {
 }
 
 .page {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;   
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 
-    > div {
-        padding: 0 nthGolden(5)+vw;
-    }
+  > div {
+    padding: 0 nthGolden(5) + vw;
+  }
 
-    &#p2 > div {
-        padding: 0 nthGolden(6)+vw;
-    }
+  &#p2 > div {
+    padding: 0 nthGolden(6) + vw;
+  }
 
-
-    &#p1 > div {
-        padding: 0 nthGolden(7)+vw;
-    }
+  &#p1 > div {
+    padding: 0 nthGolden(7) + vw;
+  }
 }
 
 .lb {
-    padding-top: nthGolden(5)+vw;
+  padding-top: nthGolden(5) + vw;
 }
 
-#lb, #statement, #catalogue {
-    width: auto;
-    height: nthGolden(5)*1vw;
+#lb,
+#statement,
+#catalogue {
+  width: auto;
+  height: nthGolden(5) * 1vw;
 }
-
-
 
 .beam {
-    background: linear-gradient(to bottom, 
-        $beamPrimary 0%,
-        $beamPrimary nthGolden(5)*1%,
-        #ffffff nthGolden(5)*1%,
-        #ffffff nthGolden(4)*1%,
-        $beamPrimary nthGolden(4)*1%,
-        $beamPrimary 100%);
+  background: linear-gradient(
+    to bottom,
+    $beamPrimary 0%,
+    $beamPrimary nthGolden(5) * 1%,
+    #ffffff nthGolden(5) * 1%,
+    #ffffff nthGolden(4) * 1%,
+    $beamPrimary nthGolden(4) * 1%,
+    $beamPrimary 100%
+  );
 }
 .beam-vert {
-    background: linear-gradient(to left, 
-        $beamPrimary 0%,
-        $beamPrimary nthGolden(5)*1%,
-        #ffffff nthGolden(5)*1%,
-        #ffffff nthGolden(4)*1%,
-        $beamPrimary nthGolden(4)*1%,
-        $beamPrimary 100%);
+  background: linear-gradient(
+    to left,
+    $beamPrimary 0%,
+    $beamPrimary nthGolden(5) * 1%,
+    #ffffff nthGolden(5) * 1%,
+    #ffffff nthGolden(4) * 1%,
+    $beamPrimary nthGolden(4) * 1%,
+    $beamPrimary 100%
+  );
 }
 
 /*.beam-vert {
@@ -154,272 +170,270 @@ p {
     */
 // main
 #main {
-    @extend .beam-vert;
-    background-size: nthGolden(6)*1vw 100%;
-    background-repeat: no-repeat;
-    // logo natural width = 61.8034vw
-    // logo natural height (by multiplying AR of 454/628 = 0.7229299363) = 44.679528025vw;
-    // the portion of that which is the beams = ~65px
+  @extend .beam-vert;
+  background-size: nthGolden(6) * 1vw 100%;
+  background-repeat: no-repeat;
+  // logo natural width = 61.8034vw
+  // logo natural height (by multiplying AR of 454/628 = 0.7229299363) = 44.679528025vw;
+  // the portion of that which is the beams = ~65px
 
-
-    @media screen and (orientation: portrait) {
-        background-position: 0 calc(200vh - (44.679528025vw * (65/454)));
-    }
-    background-position: 0 200vh;
+  @media screen and (orientation: portrait) {
+    background-position: 0 calc(200vh - (44.679528025vw * (65 / 454)));
+  }
+  background-position: 0 200vh;
 }
 
 // page 1
 #p1 {
-    background: linear-gradient(to bottom, $beamPrimary 0%, $beamPrimary 100%);
-    background-size: 100% calc(100vh - #{nthGolden(2)*1vw});
-    background-repeat: no-repeat;
-    background-position: left bottom;
+  background: linear-gradient(to bottom, $beamPrimary 0%, $beamPrimary 100%);
+  background-size: 100% calc(100vh - #{nthGolden(2) * 1vw});
+  background-repeat: no-repeat;
+  background-position: left bottom;
 
-    .beam {
-        height: nthGolden(2)+vw;
-    }
+  .beam {
+    height: nthGolden(2) + vw;
+  }
 
-    h3 {
-        margin-bottom: nthGolden(10)+vw;
-    }
+  h3 {
+    margin-bottom: nthGolden(10) + vw;
+  }
 }
 
 #p2 {
-    background-color: #fff;
+  background-color: #fff;
 
-    h1 {
-        position: relative;
-        top: nthGolden(8)*-1vw;
-    }
+  h1 {
+    position: relative;
+    top: nthGolden(8) * -1vw;
+  }
 
-    h2, p {
-        width: nthGolden(2)+vw;
-    }
+  h2,
+  p {
+    width: nthGolden(2) + vw;
+  }
 
-    .logo {
-        position: absolute;
-        bottom: 0;
-        right: nthGolden(8)+vw;
-        height: nthGolden(1) * (454 / 628) + vw;
-        width: auto;
-    }
+  .logo {
+    position: absolute;
+    bottom: 0;
+    right: nthGolden(8) + vw;
+    height: nthGolden(1) * (math.div(454, 628)) + vw;
+    width: auto;
+  }
 }
 
 // catalogue
 #p3 {
-    h1 {
-        position: relative;
-        top: nthGolden(8)*1vw;
-        width: auto;
-        display: inline-block;
-    }
+  h1 {
+    position: relative;
+    top: nthGolden(8) * 1vw;
+    width: auto;
+    display: inline-block;
+  }
 
-
-    h3, p {
-        line-height: 1.618;
-    }
+  h3,
+  p {
+    line-height: 1.618;
+  }
 }
 
 // contact
 .page.last {
-    margin-top: nthGolden(8)+vw;
+  margin-top: nthGolden(8) + vw;
 
-    > div:first-child > p:first-child {
-        //background: linear-gradient(to right, #ffffff 0%,#ffffff 91%,#ccc 91%,#ccc 100%);
-        //border-right: solid (nthGolden(9)/2)+vw black;
-        font-varient: italic;
-    }
+  > div:first-child > p:first-child {
+    //background: linear-gradient(to right, #ffffff 0%,#ffffff 91%,#ccc 91%,#ccc 100%);
+    //border-right: solid (nthGolden(9)/2)+vw black;
+    font-varient: italic;
+  }
 
-    .logo {
-        position: absolute;
-        bottom: 0;
-        right: nthGolden(8)+vw;
-        width: auto;
-        height: nthGolden(3)+vw;
-    }
+  .logo {
+    position: absolute;
+    bottom: 0;
+    right: nthGolden(8) + vw;
+    width: auto;
+    height: nthGolden(3) + vw;
+  }
 
-    p {
-        display: inline-block;
-        width: 1em;
-        margin-right: 1em;
-        word-wrap: break-word;
-        text-align: right;
-        float: left;
-    }
+  p {
+    display: inline-block;
+    width: 1em;
+    margin-right: 1em;
+    word-wrap: break-word;
+    text-align: right;
+    float: left;
+  }
 }
 
 p.whoa {
-    letter-spacing: nthGolden(11)+vw;
+  letter-spacing: nthGolden(11) + vw;
 }
 
 #catalog-punch {
-    float: right;
-    margin-top: 0;
-    margin-right: nthGolden(7) * 1vw;
-    width: nthGolden(4) * 1vw;
-    height: nthGolden(1) * 1vw;
+  float: right;
+  margin-top: 0;
+  margin-right: nthGolden(7) * 1vw;
+  width: nthGolden(4) * 1vw;
+  height: nthGolden(1) * 1vw;
 }
 
 #catalog-sort {
-    position: absolute;
-    right: -6vw;
-    @media screen and (orientation: portrait) {
+  position: absolute;
+  right: -6vw;
+  @media screen and (orientation: portrait) {
     right: -11vw;
-    }
+  }
 
-    top: nthGolden(3) - nthGolden(6) * 1vw;
+  top: nthGolden(3) - nthGolden(6) * 1vw;
+  padding: 0;
+  transform: rotateZ(40deg);
+  line-height: 1;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
-    transform: rotateZ(40deg);
-    line-height: 1;
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        width: 27vw;
-        @media screen and (orientation: portrait) {
-        width: 40vw;
-        }
-
-        li {
-            display: inline-block;
-            flex-grow: 1;
-        }
-
-        li:hover {
-            color: $beamSecondary;
-            cursor: pointer;
-        }
-
-        li.on {
-            font-weight: bold;
-        }
-
-        li.inactive {
-            color: #fff;
-            text-shadow: #aaa -0.1em 0.1em;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    width: 27vw;
+    @media screen and (orientation: portrait) {
+      width: 40vw;
     }
 
-    #sort-medium {
-        > li {
-        }
+    li {
+      display: inline-block;
+      flex-grow: 1;
     }
 
-    #sort-artist {
-        margin-left: 16vw;
-
-        > li {
-            width: 100%;
-        }
+    li:hover {
+      color: $beamSecondary;
+      cursor: pointer;
     }
+
+    li.on {
+      font-weight: bold;
+    }
+
+    li.inactive {
+      color: #fff;
+      text-shadow: #aaa -0.1em 0.1em;
+    }
+  }
+
+  #sort-medium {
+    > li {
+    }
+  }
+
+  #sort-artist {
+    margin-left: 16vw;
+
+    > li {
+      width: 100%;
+    }
+  }
 }
 
 #catalog-items {
-    /*background-image: url(/img/catalogtile.svg);
+  /*background-image: url(/img/catalogtile.svg);
     background-repeat: repeat-y;
     background-size: nthGolden(3) + nthGolden(8) +vw; */
-    .cid {
-        text-transform: uppercase;
-    }
+  .cid {
+    text-transform: uppercase;
+  }
 
-    > div {
-        display: inline-block;
+  > div {
+    display: inline-block;
+    text-align: right;
+    margin: 0 0 nthGolden(8) * 1vw nthGolden(8) * 1vw;
+    line-height: 1;
+
+    .info {
+      display: none;
+      padding: nthGolden(8) * 1vw;
+      background-color: #fff;
+      border-left-style: solid;
+      border-left-width: nthGolden(10) * 1vw;
+      border-bottom: solid nthGolden(10) * 1vw $beamPrimary;
+
+      .imgswitch {
+        text-decoration: underline;
+      }
+
+      .desc,
+      .desc p,
+      .desc + h4 {
+        margin-top: nthGolden(8) * 1vw;
+      }
+
+      h3 {
+        border-bottom: solid;
+        border-right: solid;
         text-align: right;
-        margin: 0 0 nthGolden(8)*1vw nthGolden(8)*1vw;
-        line-height: 1;
-
-        .info {
-            display: none;
-            padding: nthGolden(8)*1vw;
-            background-color: #fff;
-            border-left-style: solid;
-            border-left-width: nthGolden(10)*1vw;
-            border-bottom: solid nthGolden(10)*1vw $beamPrimary;
-
-
-            .imgswitch {
-                text-decoration: underline;
-            }
-
-            .desc,
-            .desc p,
-            .desc + h4 {
-                margin-top: nthGolden(8)*1vw;
-            }
-
-            h3 {
-                border-bottom: solid;
-                border-right: solid;
-                text-align: right;
-                padding-right: .618vw;
-                font-size: nthGolden(8)+vw;
-                @media screen and (orientation: portrait) {
-                    font-size: nthGolden(7)+vw;
-                }
-            }
-
-            .desc p{
-                text-align: justify;
-            }
+        padding-right: 0.618vw;
+        font-size: nthGolden(8) + vw;
+        @media screen and (orientation: portrait) {
+          font-size: nthGolden(7) + vw;
         }
+      }
 
-        &.hide {
-            display: none;
-        }
-
-        &.on .art {
-            width: nthGolden(1)+vw;
-            min-height: nthGolden(1)+vw;
-            height: auto;
-
-            @media screen and (orientation: portrait) {
-                width: 100vw - nthGolden(5);
-                min-height: 100vw - nthGolden(5);
-                margin-left: nthGolden(6) * -1vw;
-            }
-
-            .info {
-                display: block;
-            }
-        }
-
-
-        .art {
-            width: nthGolden(3)+vw;
-            height: nthGolden(3)+vw;
-            position: relative;
-            box-shadow: nthGolden(9)+vw nthGolden(9)+vw black;
-
-            @media screen and (min-width: 1240px) {
-                width: nthGolden(4)+vw;
-                height: nthGolden(4)+vw;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
-
-            &:before {
-                display: block;
-                content: '';
-                width: nthGolden(4)+vw;
-                height: nthGolden(11)+vw;
-                background-color: black;
-                position: absolute;
-                z-index: -1;
-                transform: rotateZ(45deg);
-                top: 0;
-                left: -4.7vw;
-            }
-        }
+      .desc p {
+        text-align: justify;
+      }
     }
+
+    &.hide {
+      display: none;
+    }
+
+    &.on .art {
+      width: nthGolden(1) + vw;
+      min-height: nthGolden(1) + vw;
+      height: auto;
+
+      @media screen and (orientation: portrait) {
+        width: 100vw - nthGolden(5);
+        min-height: 100vw - nthGolden(5);
+        margin-left: nthGolden(6) * -1vw;
+      }
+
+      .info {
+        display: block;
+      }
+    }
+
+    .art {
+      width: nthGolden(3) + vw;
+      height: nthGolden(3) + vw;
+      position: relative;
+      box-shadow: nthGolden(9) + vw nthGolden(9) + vw black;
+
+      @media screen and (min-width: 1240px) {
+        width: nthGolden(4) + vw;
+        height: nthGolden(4) + vw;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:before {
+        display: block;
+        content: "";
+        width: nthGolden(4) + vw;
+        height: nthGolden(11) + vw;
+        background-color: black;
+        position: absolute;
+        z-index: -1;
+        transform: rotateZ(45deg);
+        top: 0;
+        left: -4.7vw;
+      }
+    }
+  }
 }
