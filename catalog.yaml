@@ -489,7 +489,7 @@ catalog:
       - name: Bandcamp
         href: "https://lazerbeams.bandcamp.com/album/o"
   - "no": lb018
-    artist: Lazerbeams
+    artist: "Lazerbeams: Tonite<em>!</em>"
     medium: Audio
     title: "S1E05: Lazerbeams: TONITE!"
     color: df757f
@@ -508,7 +508,7 @@ catalog:
       - name: Apple Music
         href: "https://music.apple.com/ca/album/lazerbeams-tonite/1603122298"
   - "no": lb018.1
-    artist: Lazerbeams
+    artist: "Lazerbeams: Tonite<em>!</em>"
     medium: Objects
     title: "Lazerbeams: Tonite! Logo Sticker"
     color: 339471
