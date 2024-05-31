@@ -495,7 +495,7 @@ catalog:
     color: df757f
     h3: "season finale"
     desc: |
-      <p>finally, after many years, lazerbea.ms is very proud to present the season finale of the first series of Lazerbeams: Tonite!</p>
+      <p>finally, after many years, lazerbea.ms is very proud to present the season finale of the first series of Lazerbeams: Tonite<em>!</em></p>
       <p>i don't really know what to say about this one besides it is very special to us.</p>
       <p>this is the night we saw god, and i just feel lucky to have captured it.</p>
       <p>like previous episodes, this is a journey in three movements (1-6, 7-8, 9-10) of post-techno-jazz-surfgaze. created tabula rasa by two high(-vibrating) musicians and composers with different backgrounds that found a language together. i wish there was a further story to this that i could hype. there isn't. this is mystical nighttime shit. ride or die.</p>
@@ -534,3 +534,25 @@ catalog:
         href: "https://vimeo.com/685259886"
       - name: YouTube
         href: "https://www.youtube.com/watch?v=EiEFQsugawo"
+  - "no": lb020
+    artist: "Lazerbeams: Tonite<em>!</em>"
+    medium: Audio
+    title: "S1E06: tomorrow."
+    color: 52175b
+    h3: "prologue"
+    desc: |
+      <p>two ambient future dreams from the season one sessions.</p>
+      <p><strong>part one:</strong> cinematic 16-bit sensual color spectrums in abstract palaces ribald consummation television of the future </p>
+      <p><strong>part two:</strong> tetsuo luxury beach 35mm steel lathe warm industry nothingness gradient fields full of flowers and frolicking beautiful trending on artstation 4k 8k music video for steppin' out 1980s funk max headroom tron trippy moss invoking jamacia tropics at night walking home along lost highway the young and the restless photo realistic a church with light coming through the doors and illuminated stained glass dramatic glowing plasticine baby upon wooden alter halo irradiated iridescent outer space with fetus in center of sun lens flare shame in outer space 3d octane render mystical steamboat willy looking at himself in a mirror oroboros gothic anime glitch acid at night time mushroom art erowid with bud faces a scratchy old photograph of waves at the beach cocaine</p>
+    date: 2021.12.31
+    avails:
+      - name: Bandcamp
+        href: "https://lazerbeams.bandcamp.com/album/tomorrow"
+      - name: Spotify
+        href: "https://open.spotify.com/album/0Fs3CPB7YVE1Xma2IGJcep"
+      - name: Apple Music
+        href: "https://music.apple.com/ca/album/tomorrow/1648387183"
+      - name: YouTube (pt 1)
+        href: https://www.youtube.com/watch?v=eQj_te4mco4
+      - name: YouTube (pt 2)
+        href: https://www.youtube.com/watch?v=EgKD9kbTiIQ
