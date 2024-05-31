@@ -573,8 +573,30 @@ catalog:
     date: 2024.04.20
     avails:
       - name: Bandcamp
-        href: "https://lazerbeams.bandcamp.com/album/tomorrow"
+        href: "https://lazerbeams.bandcamp.com/album/the-end"
       - name: Spotify
         href: "https://open.spotify.com/album/3ihs9P9MgFwk3syqkkgFpG"
       - name: Apple Music
         href: "https://music.apple.com/ca/album/the-end-ep/1740700689"
+  - "no": lb022
+    artist: "Marcello Marcello"
+    medium: Audio
+    title: "bon bon"
+    color: 202941
+    h3: "smooth as white star extra dry moët chandon"
+    desc: |
+      <p>two very different tropical flavors here, united by groove and huge dirty bass.</p>
+      <p>"bon bon" is a neoperreo dancefloor killer ft. LL Cool J*.</p>
+      <p>"doggi lead" is wacked out cumbia for chasing rabbits, headbanging, or a nice home-cooked meal.</p>
+      <p>your new song(s)-of-the-summer</p>
+      <p>mastered by Mattias Fridell</p>
+      <p>*thank you Uncle L, plz don't sue me :)</p>
+    date: 2024.05.27
+    avails:
+      - name: Bandcamp
+        href: "https://lazerbeams.bandcamp.com/album/bon-bon"
+      - name: Spotify
+        href: "https://open.spotify.com/album/5dwfbEu7vSHaxg1ZoKqLIA"
+      - name: Apple Music
+        href: "https://music.apple.com/ca/album/bon-bon-single/1747961464"
+        
