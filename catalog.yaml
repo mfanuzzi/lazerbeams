@@ -488,3 +488,33 @@ catalog:
     avails:
       - name: Bandcamp
         href: "https://lazerbeams.bandcamp.com/album/o"
+  - "no": lb018
+    artist: Lazerbeams
+    medium: Audio
+    title: "S1E05: Lazerbeams: TONITE!"
+    color: df757f
+    h3: "season finale"
+    desc: |
+      <p>finally, after many years, lazerbea.ms is very proud to present the season finale of the first series of Lazerbeams: Tonite!</p>
+      <p>i don't really know what to say about this one besides it is very special to us.</p>
+      <p>this is the night we saw god, and i just feel lucky to have captured it.</p>
+      <p>like previous episodes, this is a journey in three movements (1-6, 7-8, 9-10) of post-techno-jazz-surfgaze. created tabula rasa by two high(-vibrating) musicians and composers with different backgrounds that found a language together. i wish there was a further story to this that i could hype. there isn't. this is mystical nighttime shit. ride or die.</p>
+    date: 2021.12.31
+    avails:
+      - name: Bandcamp
+        href: "https://lazerbeams.bandcamp.com/album/s1e05-lazerbeams-tonite"
+      - name: Spotify
+        href: "https://open.spotify.com/album/3hnzm3Dg1DG7Qjnhj4kcIg"
+      - name: Apple Music
+        href: "https://music.apple.com/ca/album/lazerbeams-tonite/1603122298"
+  - "no": lb018.1
+    artist: Lazerbeams
+    medium: Objects
+    title: "Lazerbeams: Tonite! Logo Sticker"
+    color: 339471
+    h3: "ＲＡＲＥ"
+    desc: fancy-ass 4"x4" die-cut holographic opalescent vinyl "vaporwave" sticker designed by axton frick and printed in Portland, OR.
+    date: 2021.12.31
+    avails:
+      - name: Bandcamp
+        href: "https://lazerbeams.bandcamp.com/merch/rare-4-sticker-on-opalescent-holographic-vaporwave-vinyl"
