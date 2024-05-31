@@ -8,7 +8,7 @@ const gulp = require("gulp"),
   rimraf = require("rimraf"),
   concat = require("gulp-concat"),
   cssmin = require("gulp-cssmin"),
-  uglify = import("gulp-uglify"),
+  uglify = require("gulp-uglify"),
   sass = require("gulp-sass")(require("sass")),
   connect = require("gulp-connect"),
   sort = require("gulp-sort"),
@@ -16,9 +16,10 @@ const gulp = require("gulp"),
   rename = require("gulp-rename"),
   yaml = require("js-yaml"),
   fs = require("fs"),
-  imageResize = import("gulp-image-resize"),
-  imagemin = import("gulp-imagemin"),
+  imageResize = require("gulp-image-resize"),
   path = require("path");
+
+// const imagemin = (await import("gulp-imagemin")).default;
 
 const d = fs.readFileSync("./catalog.yaml", "utf8");
 var catalogData = yaml.load(d);
@@ -46,21 +47,21 @@ paths.minCss = paths.webroot + "css/*.min.css";
 paths.concatJsDest = paths.pub + "js/site.min.js";
 paths.concatCssDest = paths.pub + "css/site.min.css";
 
-gulp.task("clean:js", function (cb) {
+gulp.task("clean:js", async function (cb) {
   rimraf(paths.concatJsDest, cb);
 });
 
-gulp.task("clean:css", function (cb) {
+gulp.task("clean:css", async function (cb) {
   rimraf(paths.concatCssDest, cb);
 });
 
-gulp.task("sass", function () {
-  return gulp
+gulp.task("sass", async () =>
+  gulp
     .src(paths.scss)
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("./css"))
-    .pipe(connect.reload());
-});
+    .pipe(connect.reload())
+);
 
 gulp.task("watch", function () {
   gulp.watch(paths.scss, ["sass"]);
@@ -68,48 +69,52 @@ gulp.task("watch", function () {
   gulp.watch(paths.js, ["min:js"]);
 });
 
-gulp.task("clean", gulp.parallel("clean:js", "clean:css"));
+gulp.task("clean", async () => gulp.parallel("clean:js", "clean:css"));
 
-gulp.task("min:js", function () {
+gulp.task("min:js", async function () {
+  const debug = (await import("gulp-debug")).default;
+
   return (
     gulp
       .src([paths.js, "!" + paths.minJs], { base: "." })
+      .pipe(debug({ title: "Files:" }))
       .pipe(sort({ asc: false }))
+      .pipe(debug({ title: "Sorted Files:" }))
       .pipe(concat(paths.concatJsDest))
+      .pipe(debug({ title: "Concatenated Files:" }))
       //.pipe(uglify())
       .pipe(gulp.dest("."))
+      .pipe(debug({ title: "Output Files:" }))
   );
 });
 
-gulp.task("min:css", function () {
-  return gulp
+gulp.task("min:css", async () =>
+  gulp
     .src([paths.css, "!" + paths.minCss])
     .pipe(concat(paths.concatCssDest))
     .pipe(cssmin())
-    .pipe(gulp.dest("."));
-});
+    .pipe(gulp.dest("."))
+);
 
-gulp.task("min:img", function () {
-  return (
-    gulp
-      .src([paths.catalog])
-      .pipe(imageResize({ width: 800 }))
-      // .pipe(imagemin({
-      //   progressive: true
-      // }))
-      .pipe(
-        rename(function (path) {
-          console.log(path.dirname);
-          path.dirname += "/sm";
-        })
-      )
-      .pipe(gulp.dest(paths.pub + "/img/catalog"))
-  );
-});
+gulp.task("min:img", async () =>
+  gulp
+    .src([paths.catalog])
+    .pipe(imageResize({ width: 800 }))
+    // .pipe(imagemin({
+    //   progressive: true
+    // }))
+    .pipe(
+      rename(function (path) {
+        console.log(path.dirname);
+        path.dirname += "/sm";
+      })
+    )
+    .pipe(gulp.dest(paths.pub + "/img/catalog"))
+);
 
-gulp.task("min", gulp.parallel("min:js", "min:css"));
+gulp.task("min", async () => gulp.parallel("min:js", "min:css"));
 
-gulp.task("hb", function () {
+gulp.task("hb", async () => {
   var hbStream = hb()
     //.helpers(require('handlebars-helper-svg'))
     .data(catalogData);
@@ -125,8 +130,7 @@ gulp.task("hb", function () {
     .pipe(gulp.dest(paths.pub));
 });
 
-gulp.task("shares", function (taskcomplete) {
-  // For each catalog item, create a share page for each available href
+gulp.task("shares", async function (taskcomplete) {
   catalogData.catalog
     .filter((i) => i.no !== "lb011")
     .forEach(function (i) {
@@ -134,9 +138,7 @@ gulp.task("shares", function (taskcomplete) {
         Object.assign(a, i);
         a.artist = a.artist.replace(/(<([^>]+)>)/gi, "");
 
-        var hbStream = hb()
-          //.helpers(require('handlebars-helper-svg'))
-          .data(a);
+        var hbStream = hb().data(a);
 
         gulp
           .src("./share.tpl.html")
@@ -153,9 +155,7 @@ gulp.task("shares", function (taskcomplete) {
           );
       });
 
-      var hbStream = hb()
-        //.helpers(require('handlebars-helper-svg'))
-        .data(i);
+      var hbStream = hb().data(i);
 
       gulp
         .src("./item.tpl.html")
@@ -168,24 +168,21 @@ gulp.task("shares", function (taskcomplete) {
         .pipe(gulp.dest(path.join(paths.pub, i.no)));
     });
 
-  taskcomplete();
+  taskcomplete(); // This might be called before all async operations complete
 });
 
-gulp.task("static", function () {
-  return gulp
-    .src(paths.static, { base: paths.webroot })
-    .pipe(gulp.dest(paths.pub));
-});
+gulp.task("static", async () =>
+  gulp.src(paths.static, { base: paths.webroot }).pipe(gulp.dest(paths.pub))
+);
 
-gulp.task("connect", function () {
+gulp.task("connect", async () =>
   connect.server({
     root: paths.pub,
     livereload: true,
-  });
-});
+  })
+);
 
-gulp.task(
-  "publish",
+gulp.task("publish", async () =>
   gulp.series("sass", "hb", "shares", "min", "min:img", "static")
 );
 
