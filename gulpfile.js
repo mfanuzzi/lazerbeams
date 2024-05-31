@@ -16,6 +16,8 @@ const path = require("path");
 const d = fs.readFileSync("./catalog.yaml", "utf8");
 var catalogData = yaml.load(d);
 catalogData.version = +new Date();
+catalogData.catalog.reverse();
+console.log(catalogData);
 
 var paths = {
   webroot: "./",
