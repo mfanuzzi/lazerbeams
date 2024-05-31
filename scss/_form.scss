@@ -1,3 +1,5 @@
+@use "sass:math";
+
 input {
   border-width: nthGolden(11) + vw;
   margin-top: nthGolden(10) + vw;
@@ -24,14 +26,14 @@ input {
   }
 
   &:focus {
-    outline-width: (nthGolden(7) / 2) + vw;
+    outline-width: (math.div(nthGolden(7), 2)) + vw;
   }
 }
 
 #mc-embedded-subscribe {
   font-family: "Century Gothic", "Adventor", sans-serif;
-  padding-left: (nthGolden(7) / 2) + vw;
-  padding-bottom: (nthGolden(8) / 2) + vw;
+  padding-left: (math.div(nthGolden(7), 2)) + vw;
+  padding-bottom: (math.div(nthGolden(8), 2)) + vw;
   font-size: nthGolden(8) + vw;
   min-width: nthGolden(3) + vw;
   text-align: left;
@@ -68,7 +70,7 @@ input {
     background-color: $beamPrimary;
     // the below are injected from MC
     //margin: 0 0 1em 0;
-    padding: (nthGolden(8) / 2) + vw (nthGolden(7) / 2) + vw;
+    padding: (math.div(nthGolden(8), 2)) + vw (math.div(nthGolden(7), 2)) + vw;
     //font-weight: bold;
     //z-index: 1;
     //color:#fff;

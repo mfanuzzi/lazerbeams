@@ -49,15 +49,20 @@ gulp.task("clean:css", async () => {
   });
 });
 
-gulp.task(
-  "sass",
-  () =>
-    gulp
-      .src(paths.scss)
-      .pipe(sass().on("error", sass.logError))
-      .pipe(gulp.dest("./css"))
-  //.pipe(connect.reload())
-);
+gulp.task("sass", function () {
+  console.log("Starting SASS compilation");
+  return gulp
+    .src(paths.scss)
+    .on("data", (file) => console.log(`Processing file: ${file.path}`))
+    .pipe(
+      sass().on("error", (err) => {
+        console.error("SASS compilation error:", err);
+        process.exit(1);
+      })
+    )
+    .pipe(gulp.dest("./css"))
+    .on("end", () => console.log("SASS compilation completed"));
+});
 
 gulp.task("watch", function () {
   gulp.watch(paths.scss, gulp.series("sass"));

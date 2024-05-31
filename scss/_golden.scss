@@ -1,4 +1,6 @@
-﻿/// Dynamic golden ratio calculations based upon vw
+﻿@use "sass:math";
+
+/// Dynamic golden ratio calculations based upon vw
 $phi: 1.6180339887498948482; // ((1 + sqrt(5)) / 2);
 $phil: math.div(1, $phi);
 

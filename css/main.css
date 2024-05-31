@@ -102,19 +102,22 @@ input {
   background-color: #18d1bd;
 }
 
-html, body {
+html,
+body {
   box-sizing: content-box;
   font-family: "Century Gothic", "Adventor", sans-serif;
   margin: 0;
   font-size: 2.1286236252vw;
 }
 @media screen and (orientation: portrait) {
-  html, body {
+  html,
+  body {
     font-size: 3.4441853749vw;
   }
 }
 
-a:focus, input:focus {
+a:focus,
+input:focus {
   outline-color: #18d1bd;
 }
 
@@ -192,7 +195,11 @@ h2 + p {
   margin-top: 3.4441853749vw;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
   line-height: 1;
 }
@@ -216,7 +223,9 @@ h1, h2, h3, h4, p {
   padding-top: 9.0169943749vw;
 }
 
-#lb, #statement, #catalogue {
+#lb,
+#statement,
+#catalogue {
   width: auto;
   height: 9.0169943749vw;
 }
@@ -270,7 +279,8 @@ h1, h2, h3, h4, p {
   position: relative;
   top: -2.1286236252vw;
 }
-#p2 h2, #p2 p {
+#p2 h2,
+#p2 p {
   width: 38.196601125vw;
 }
 #p2 .logo {
@@ -287,7 +297,8 @@ h1, h2, h3, h4, p {
   width: auto;
   display: inline-block;
 }
-#p3 h3, #p3 p {
+#p3 h3,
+#p3 p {
   line-height: 1.618;
 }
 
@@ -375,8 +386,8 @@ p.whoa {
 
 #catalog-items {
   /*background-image: url(/img/catalogtile.svg);
-  background-repeat: repeat-y;
-  background-size: nthGolden(3) + nthGolden(8) +vw; */
+    background-repeat: repeat-y;
+    background-size: nthGolden(3) + nthGolden(8) +vw; */
 }
 #catalog-items .cid {
   text-transform: uppercase;
