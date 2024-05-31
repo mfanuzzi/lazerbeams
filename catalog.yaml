@@ -513,8 +513,24 @@ catalog:
     title: "Lazerbeams: Tonite! Logo Sticker"
     color: 339471
     h3: "ＲＡＲＥ"
-    desc: fancy-ass 4"x4" die-cut holographic opalescent vinyl "vaporwave" sticker designed by axton frick and printed in Portland, OR.
+    desc: fancy-ass 4"x4" die-cut holographic opalescent vinyl "vaporwave" sticker designed by axton frick and printed in Portland, OR. edition of 20.
     date: 2021.12.31
     avails:
       - name: Bandcamp
         href: "https://lazerbeams.bandcamp.com/merch/rare-4-sticker-on-opalescent-holographic-vaporwave-vinyl"
+  - "no": lb015
+    artist: "Bosq-A"
+    medium: Audio
+    title: "北​海​道​日​没 | 東​京​夜​明​け"
+    color: a95533
+    h3: "ｈｏｋｋａｉｄｏ ｓｕｎｓｅｔ | ｔｏｋｙｏ ｄａｗｎ"
+    desc: |
+      <p>OST of a beautiful train journey from a seaside sunset to a morning in the big red-eyed city.</p>
+    date: 2022.03.14
+    avails:
+      - name: Bandcamp
+        href: "https://lazerbeams.bandcamp.com/album/-"
+      - name: Vimeo
+        href: "https://vimeo.com/685259886"
+      - name: YouTube
+        href: "https://www.youtube.com/watch?v=EiEFQsugawo"
