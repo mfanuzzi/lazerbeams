@@ -561,7 +561,7 @@ catalog:
     medium: Audio
     title: "The End"
     color: 202941
-    h3: "a new beginning"
+    h3: "THE END: a new beginning"
     desc: |
       <p>last year i (Mr. Fanuzzi) was fortunate to attend pickathon and even more fortunate that this fest, not known for electronic music, had booked Nikki fuckin' Nair. he played two sets, including the final show on the final day.</p>
       <p>those sets changed my life.</p>
@@ -582,7 +582,7 @@ catalog:
     artist: "Marcello Marcello"
     medium: Audio
     title: "bon bon"
-    color: 202941
+    color: a94f5e
     h3: "smooth as white star extra dry moët chandon"
     desc: |
       <p>two very different tropical flavors here, united by groove and huge dirty bass.</p>
@@ -599,4 +599,17 @@ catalog:
         href: "https://open.spotify.com/album/5dwfbEu7vSHaxg1ZoKqLIA"
       - name: Apple Music
         href: "https://music.apple.com/ca/album/bon-bon-single/1747961464"
-        
+  - "no": lb022.1
+    artist: "Marcello Marcello"
+    medium: Video
+    title: "bon bon (video)"
+    color: 785261
+    h3: "in ya mouf"
+    desc: |
+      <p><em>yeah, yeah, yeah, yeah</em></p>
+      <p>starring the author, deep fried with stable diffusion</p>
+    date: 2024.05.27
+    avails:
+      - name: YouTube
+        href: "https://www.youtube.com/watch?v=CGWQIymzbdQ"
+                
